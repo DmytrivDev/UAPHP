@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=./", 
+    "build": "vite build --base=./",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -20,6 +20,8 @@
   "author": "Andrii Dmytriv",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "nice-select2": "^2.2.0",
     "npm": "^10.7.0",
     "sass": "^1.72.0",
     "vite-plugin-full-reload": "^1.0.5",
