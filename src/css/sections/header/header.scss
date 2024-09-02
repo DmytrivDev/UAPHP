@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(0);
+  background-color: transparent;
+  transition: all 300ms ease-in-out;
+  &.is-fixed {
+    transform: translateY(-100%);
+  }
+  &.style-scroll {
+    background-color: var(--cw);
+    .logo1 {
+      display: none;
+    }
+    .logo2 {
+      display: block;
+    }
+  }
+
+  &__top {
+    position: relative;
+    z-index: 15;
+    padding: 0.75rem 0;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+  }
+
+  .custom-logo-link {
+    display: block;
+    width: 9rem;
+    margin-right: auto;
+    img {
+      width: 100%;
+    }
+  }
+  .logo1 {
+  }
+  .logo2 {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 500px) {
+}
