@@ -32,7 +32,7 @@ import '@splidejs/splide/css';
 // };
 // instSlider();
 
-const instSecondSlider = () => {
+const instHeroSlider = () => {
   const slider = document.querySelector('.hero__splide');
 
   if (slider) {
@@ -62,7 +62,7 @@ const instSecondSlider = () => {
 
   arrowsClicker();
 };
-instSecondSlider();
+instHeroSlider();
 
 function arrowsClicker() {
   const container = document.querySelector('.hero__splide');
