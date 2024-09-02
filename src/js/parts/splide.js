@@ -84,7 +84,7 @@ function updateSlideNumber(slide) {
   const totalSlides = slide.Components.Slides.getLength();
   const spanElements = document.querySelectorAll('.arrows__number');
 
-  spanElements.forEach(spanElement => {
+  spanElements?.forEach(spanElement => {
     spanElement.textContent = `${currentIndex}/${totalSlides}`;
   });
 }
