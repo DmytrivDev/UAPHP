@@ -38,17 +38,25 @@ const instSecondSlider = () => {
   if (slider) {
     const options = {
       type: 'slider',
-      speed: 1500,
+      speed: 2000,
       pagination: false,
       updateOnMove: true,
+      drag: false,
+      swipe: false,
+      // autoplay: true,
+      // interval: 5000,
+      // pauseOnHover: true,
+      // pauseOnFocus: true,
     };
 
     const splide = new Splide(slider, options).mount();
 
     updateSlideNumber(splide);
+    updateArrowsState(splide);
 
     splide.on('move', () => {
       updateSlideNumber(splide);
+      updateArrowsState(splide);
     });
   }
 
@@ -79,4 +87,25 @@ function updateSlideNumber(slide) {
   spanElements.forEach(spanElement => {
     spanElement.textContent = `${currentIndex}/${totalSlides}`;
   });
+}
+
+function updateArrowsState(slide) {
+  const arrowsNext = document.querySelector('.arrows__next');
+  const arrowsPrev = document.querySelector('.arrows__prev');
+
+  if (slide.index === slide.Components.Slides.getLength() - 1) {
+    arrowsNext.disabled = true;
+    arrowsNext.classList.add('is-disabled');
+  } else {
+    arrowsNext.disabled = false;
+    arrowsNext.classList.remove('is-disabled');
+  }
+
+  if (slide.index === 0) {
+    arrowsPrev.disabled = true;
+    arrowsPrev.classList.add('is-disabled');
+  } else {
+    arrowsPrev.disabled = false;
+    arrowsPrev.classList.remove('is-disabled');
+  }
 }

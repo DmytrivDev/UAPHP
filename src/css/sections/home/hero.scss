@@ -150,6 +150,16 @@
           hue-rotate(320deg) brightness(104%) contrast(100%);
       }
     }
+    &.is-disabled {
+      cursor: default;
+      opacity: 0.5;
+      &:hover {
+        background-color: var(--cw);
+        span {
+          filter: none;
+        }
+      }
+    }
   }
   &__next {
     span {
