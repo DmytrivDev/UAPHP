@@ -1,35 +1,47 @@
-// Gilroy
 @font-face {
-	font-display: swap;
-	font-family: "Gilroy"; 
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url("../../../public/fonts/Gilroy-Regular/Gilroy-Regular.eot")
-			format("embedded-opentype"),
-		url("../../../public/fonts/Gilroy-Regular/Gilroy-Regular.ttf") format("truetype"),
-		url("../../../public/fonts/Gilroy-Regular/Gilroy-Regular.woff2") format("woff2");
+    font-family: "FixelDisplay";
+    src: url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot");
+    src:
+        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.woff2") format("woff"),
+        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
 }
+
 @font-face {
-	font-display: swap;
-	font-family: "Gilroy";
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url("../../../public/fonts/Gilroy-Medium/Gilroy-Medium.eot")
-			format("embedded-opentype"),
-		url("../../../public/fonts/Gilroy-Medium/Gilroy-Medium.ttf") format("truetype"),
-		url("../../../public/fonts/Gilroy-Medium/Gilroy-Medium.woff2") format("woff2");
+    font-family: "FixelDisplay";
+    src: url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot");
+    src:
+        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.woff2") format("woff"),
+        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
 }
+
 @font-face {
-	font-display: swap;
-	font-family: "Gilroy";
-	font-style: normal;
-	font-weight: 600;
-	src:
-		url("../../../public/fonts/Gilroy-Semibold/Gilroy-Semibold.eot")
-			format("embedded-opentype"),
-		url("../../../public/fonts/Gilroy-SemiBold/Gilroy-Semibold.ttf")
-			format("truetype"),
-		url("../../../public/fonts/Gilroy-SemiBold/Gilroy-Semibold.woff2") format("woff2");
+    font-family: "FixelDisplay";
+    src: url("../../fonts/FixelDisplay-SemiBold/FixelDisplay-SemiBold.eot");
+    src:
+        url("../../fonts/FixelDisplay-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/FixelDisplay-SemiBold.woff") format("woff"),
+        url("../../fonts/FixelDisplay-SemiBold.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "FixelDisplay";
+    src: url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.eot");
+    src:
+        url("../../fonts//FixelDisplay-BoldFixelDisplay-SemiBoldold.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.woff") format("woff"),
+        url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
 }
