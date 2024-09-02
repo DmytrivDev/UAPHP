@@ -1,47 +1,56 @@
 @font-face {
-    font-family: "FixelDisplay";
-    src: url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot");
-    src:
-        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot?#iefix") format("embedded-opentype"),
-        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.woff2") format("woff"),
-        url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.ttf") format("truetype");
-    font-display: swap;
-    font-style: normal;
-    font-weight: 400;
+  font-family: "FixelDisplay";
+  src: url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot");
+  src:
+    url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.woff2")
+      format("woff2"),
+    url("../../fonts/FixelDisplay-Regular/FixelDisplay-Regular.ttf")
+      format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "FixelDisplay";
-    src: url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot");
-    src:
-        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot?#iefix") format("embedded-opentype"),
-        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.woff2") format("woff"),
-        url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.ttf") format("truetype");
-    font-display: swap;
-    font-style: normal;
-    font-weight: 500;
+  font-family: "FixelDisplay";
+  src: url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot");
+  src:
+    url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.woff2")
+      format("woff2"),
+    url("../../fonts/FixelDisplay-Medium/FixelDisplay-Medium.ttf")
+      format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: "FixelDisplay";
-    src: url("../../fonts/FixelDisplay-SemiBold/FixelDisplay-SemiBold.eot");
-    src:
-        url("../../fonts/FixelDisplay-SemiBold.eot?#iefix") format("embedded-opentype"),
-        url("../../fonts/FixelDisplay-SemiBold.woff") format("woff"),
-        url("../../fonts/FixelDisplay-SemiBold.ttf") format("truetype");
-    font-display: swap;
-    font-style: normal;
-    font-weight: 600;
+  font-family: "FixelDisplay";
+  src: url("../../fonts/FixelDisplay-SemiBold/FixelDisplay-SemiBold.eot");
+  src:
+    url("../../fonts/FixelDisplay-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/FixelDisplay-SemiBold.woff2") format("woff2"),
+    url("../../fonts/FixelDisplay-SemiBold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: "FixelDisplay";
-    src: url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.eot");
-    src:
-        url("../../fonts//FixelDisplay-BoldFixelDisplay-SemiBoldold.eot?#iefix") format("embedded-opentype"),
-        url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.woff") format("woff"),
-        url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.ttf") format("truetype");
-    font-display: swap;
-    font-style: normal;
-    font-weight: 700;
+  font-family: "FixelDisplay";
+  src: url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.eot");
+  src:
+    url("../../fonts/FixelDisplay-Bold/FixelDisplay-SemiBoldold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.woff2") format("woff2"),
+    url("../../fonts/FixelDisplay-Bold/FixelDisplay-Bold.ttf")
+      format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
