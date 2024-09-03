@@ -1,0 +1,111 @@
+.footer {
+  background-color: var(--cb);
+
+  &__top {
+    padding: 2rem 0;
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.24);
+  }
+  &__part1 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1.75rem;
+  }
+  &__box {
+  }
+  &__info {
+    margin-top: 1.59rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    p {
+      color: var(--cw);
+      font-size: 0.75rem;
+      line-height: 1.33;
+    }
+  }
+  &__digital {
+    display: flex;
+    align-items: start;
+    gap: 0.25rem;
+    p {
+      line-height: 1.66;
+    }
+    span {
+      width: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 1.5rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      a {
+        font-size: 0.875rem;
+        line-height: 1.42;
+      }
+    }
+    a {
+      color: var(--cw);
+      width: fit-content;
+      transition: all 150ms ease-in;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__lead {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__bottom {
+    padding: 1.5rem 0;
+  }
+  &__part2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.19rem;
+  }
+  &__text {
+    color: var(--cw);
+    font-size: 0.75rem;
+    line-height: 1.33;
+    max-width: 44.4375rem;
+  }
+  &__companies {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(1) {
+        width: 8.28988rem;
+      }
+      &:nth-child(2) {
+        width: 4.75rem;
+      }
+    }
+  }
+
+  .custom-logo-link {
+    display: block;
+    width: 12rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.logo1 {
+}

@@ -118,13 +118,9 @@
   }
   &__box {
     position: absolute;
+    z-index: 6;
     bottom: 2.37rem;
     right: 0;
-    z-index: 6;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
   }
   &__wrapp {
     display: flex;
@@ -209,6 +205,10 @@
 
   .arrows {
     &__box {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
       bottom: 2.44rem;
       gap: 1.5rem;
       &::before {
