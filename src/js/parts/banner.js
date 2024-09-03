@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const duration = (listWidth + extraSpace) / 200;
 
     bannerList.style.animationDuration = `${duration}s`;
-    console.log(duration);
 
     bannerList.style.setProperty('--extra-space', `${extraSpace}px`);
   }
