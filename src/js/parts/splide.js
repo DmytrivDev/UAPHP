@@ -38,15 +38,16 @@ const instHeroSlider = () => {
   if (slider) {
     const options = {
       type: 'slider',
-      speed: 2000,
+      speed: 1000,
       pagination: false,
       updateOnMove: true,
       drag: false,
       swipe: false,
-      // autoplay: true,
-      // interval: 5000,
-      // pauseOnHover: true,
-      // pauseOnFocus: true,
+      breakpoints: {
+        960: {
+          speed: 500,
+        },
+      },
     };
 
     const splide = new Splide(slider, options).mount();
