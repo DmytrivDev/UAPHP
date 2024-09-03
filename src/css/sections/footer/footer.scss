@@ -14,7 +14,7 @@
   &__box {
   }
   &__info {
-    margin-top: 1.59rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -107,5 +107,50 @@
   }
 }
 
-.logo1 {
+@media screen and (max-width: 960px) {
+  .footer {
+    &__top {
+      padding: 2rem 0 1.5rem 0;
+    }
+    &__part1 {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 1.5rem;
+      ul {
+        a {
+          font-size: 0.75rem;
+          line-height: 1.33;
+        }
+      }
+    }
+    &__lead {
+      font-size: 0.875rem;
+      line-height: 1.71;
+      margin-bottom: 0.75rem;
+    }
+
+    &__part2 {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+    &__text {
+      max-width: 100%;
+    }
+    &__bottom {
+      padding: 1.5rem 0 1.19rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .footer {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
