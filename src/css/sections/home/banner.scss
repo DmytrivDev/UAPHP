@@ -1,0 +1,60 @@
+.banner {
+  &__body {
+    padding: 2.13rem 0;
+    background-color: var(--cn);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    animation: marquee 8s linear infinite;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    span {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.16;
+      text-transform: lowercase;
+      text-wrap: nowrap;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--extra-space)));
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .banner {
+    &__body {
+      padding: 1.5rem 0;
+    }
+    &__list {
+      gap: 0.5rem;
+    }
+    &__item {
+      gap: 0.5rem;
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
