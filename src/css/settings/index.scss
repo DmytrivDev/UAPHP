@@ -100,7 +100,7 @@
     height: 100%;
     font-weight: 600;
     line-height: 1.33;
-    transform: translateX(1.75rem);
+    transform: translateX(1.75rem) translateY(0.1rem);
     font-size: 0.5rem;
     visibility: hidden;
     opacity: 0;
@@ -132,6 +132,18 @@
       background-color: var(--cb);
     }
   }
+  &.bgw {
+    .btn-circle {
+      background-color: var(--cw);
+    }
+    .btn-text {
+      color: var(--cb);
+    }
+    .btn-icon {
+      filter: brightness(0) saturate(100%) invert(55%) sepia(68%)
+        saturate(6180%) hue-rotate(199deg) brightness(88%) contrast(99%);
+    }
+  }
   &.bgv {
     .btn-circle {
       background-color: var(--cv);
@@ -150,7 +162,7 @@
     .btn-text {
       visibility: visible;
       opacity: 1;
-      transform: translateX(0);
+      transform: translateX(0) translateY(0.1rem);
       font-size: 0.75rem;
     }
     .btn-icon {
