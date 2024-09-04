@@ -5,6 +5,10 @@
 @import url('./settings/general.scss');
 @import url('./settings/index.scss');
 
+/* General */
+@import url('./sections/general/join.scss');
+@import url('./sections/general/ourcontact.scss');
+
 /* Header */
 @import url('./sections/header/header.scss');
 @import url('./sections/header/patrs/nav.scss');

@@ -1,0 +1,67 @@
+.join {
+  margin-top: 10rem;
+  overflow: hidden;
+
+  &__boy {
+    position: relative;
+    background-color: var(--cb);
+    padding: 3rem;
+  }
+  &__title {
+    color: var(--cw);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.12;
+    text-transform: uppercase;
+    margin-bottom: 1.12rem;
+  }
+  &__text {
+    color: var(--cw);
+    font-size: 1.125rem;
+    line-height: 1.33;
+    max-width: 35rem;
+    margin-bottom: 1.5rem;
+  }
+  &__vector {
+    position: absolute;
+    top: 1.16rem;
+    right: -1.52rem;
+    width: 33.48969rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .join {
+    margin-top: 6rem;
+    background-color: var(--cb);
+
+    &__boy {
+      padding: 2rem 0 3.25rem 0;
+    }
+    &__title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.14;
+      margin-bottom: 0.75rem;
+    }
+    &__text {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 27rem;
+      margin-bottom: 2.5rem;
+    }
+    &__vector {
+      width: 21rem;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .join {
+    &__vector {
+      top: 11rem;
+      right: -2.95rem;
+      width: 9.25rem;
+    }
+  }
+}

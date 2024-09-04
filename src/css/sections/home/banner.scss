@@ -1,14 +1,33 @@
 .banner {
-  &__body {
+  &__carousell {
     padding: 2.13rem 0;
     background-color: var(--cn);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &:hover {
+      .banner__list {
+        animation-play-state: paused !important;
+      }
+    }
   }
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     gap: 1rem;
-    animation: marquee 8s linear infinite;
+    width: 100%;
+    will-change: transform;
+
+    &.carousell-part1 {
+      animation: animate1 40s -40s linear infinite;
+      padding-right: 0.5rem;
+    }
+    &.carousell-part2 {
+      animation: animate2 40s -20s linear infinite;
+      padding-left: 0.5rem;
+    }
   }
   &__item {
     display: flex;
@@ -31,22 +50,40 @@
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
+@keyframes animate1 {
+  0% {
+    transform: translateX(calc(100% + var(--move1)));
   }
-  to {
-    transform: translateX(calc(-100% - var(--extra-space)));
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(var(--move2));
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 
 @media screen and (max-width: 960px) {
   .banner {
-    &__body {
+    &__carousell {
       padding: 1.5rem 0;
     }
     &__list {
       gap: 0.5rem;
+
+      &.carousell-part1 {
+        animation: animate1 30s -30s linear infinite;
+        padding-right: 0.25rem;
+      }
+      &.carousell-part2 {
+        animation: animate2 30s -15s linear infinite;
+        padding-left: 0.25rem;
+      }
     }
     &__item {
       gap: 0.5rem;

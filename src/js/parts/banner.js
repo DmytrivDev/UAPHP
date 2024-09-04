@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const bannerCarousell = document.querySelector('.banner__carousell');
+
   const bannerList = document.querySelector('.banner__list');
-  const bannerBody = document.querySelector('.banner__body');
+  const carousellPartF = document.querySelector('.carousell-part1');
+  const carousellPartS = document.querySelector('.carousell-part2');
 
   function updateMarqueeAnimation() {
-    const listWidth = bannerList.scrollWidth; // Полная ширина списка
-    const bodyWidth = bannerBody.clientWidth; // Ширина видимой области
+    const listWidthPartF = carousellPartF.scrollWidth; // Полная ширина списка
+    const listWidthPartS = carousellPartS.scrollWidth; // Полная ширина списка
+    console.log(listWidthPartF);
+    console.log(listWidthPartS);
 
-    const extraSpace = listWidth - bodyWidth;
+    const carousellWidth = bannerCarousell.clientWidth; // Ширина видимой области
+    console.log(carousellWidth);
 
-    const duration = (listWidth + extraSpace) / 200;
+    // const spacePartS = listWidthPartS - carousellWidth;
 
-    bannerList.style.animationDuration = `${duration}s`;
+    // const duration = (listWidth + extraSpace) / 200;
 
-    bannerList.style.setProperty('--extra-space', `${extraSpace}px`);
+    // bannerList.style.animationDuration = `${duration}s`;
+
+    const moveValueF = listWidthPartF - carousellWidth;
+    carousellPartF.style.setProperty('--move1', `${Math.abs(moveValueF)}px`);
+    console.log(moveValueF);
+
+    const moveValueS = listWidthPartS - carousellWidth;
+    carousellPartS.style.setProperty('--move2', `${Math.abs(moveValueS)}px`);
+    console.log(moveValueS);
   }
 
   updateMarqueeAnimation();
