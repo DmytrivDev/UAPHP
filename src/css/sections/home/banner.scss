@@ -22,11 +22,9 @@
 
     &.carousell-part1 {
       animation: animate1 40s -40s linear infinite;
-      padding-right: 0.5rem;
     }
     &.carousell-part2 {
       animation: animate2 40s -20s linear infinite;
-      padding-left: 0.5rem;
     }
   }
   &__item {
@@ -52,19 +50,19 @@
 
 @keyframes animate1 {
   0% {
-    transform: translateX(calc(100% + var(--move1)));
+    transform: translateX(calc(100% + var(--move1-p)));
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% + var(--move1-m) - 1.5rem));
   }
 }
 
 @keyframes animate2 {
   0% {
-    transform: translateX(var(--move2));
+    transform: translateX(var(--move2-p));
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(calc(-200% + var(--move2-m) - 1.5rem));
   }
 }
 
