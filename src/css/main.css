@@ -6,6 +6,7 @@
 @import url('./settings/index.scss');
 
 /* General */
+@import url('./sections/general/cookie.scss');
 @import url('./sections/general/join.scss');
 @import url('./sections/general/ourcontact.scss');
 
