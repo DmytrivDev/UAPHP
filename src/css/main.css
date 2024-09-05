@@ -18,6 +18,7 @@
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/banner.scss');
 @import url('./sections/home/current.scss');
+@import url('./sections/home/mission.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

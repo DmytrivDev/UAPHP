@@ -92,6 +92,10 @@
         font-size: 1.125rem;
         line-height: 1.33;
       }
+      &:hover,
+      &:focus {
+        border-color: var(--cm);
+      }
     }
     input {
       padding: 1.25rem 3.3rem 1.25rem 1.5rem;
@@ -129,6 +133,7 @@
     }
   }
   &__checkbox {
+    cursor: pointer;
     display: flex;
     align-items: start;
     gap: 0.575rem;
