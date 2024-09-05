@@ -77,7 +77,7 @@ function showSuccess() {
 }
 
 // Обробка натискання кнопки "Подати заявку"
-sendBtn.addEventListener('click', function (event) {
+sendBtn?.addEventListener('click', function (event) {
   event.preventDefault();
 
   if (validateForm()) {
@@ -87,22 +87,22 @@ sendBtn.addEventListener('click', function (event) {
 });
 
 // Перевірка полів на введення даних у реальному часі
-const nameField = form.querySelector('input[name="join-name"]');
-const emailField = form.querySelector('input[name="join-email"]');
+const nameField = form?.querySelector('input[name="join-name"]');
+const emailField = form?.querySelector('input[name="join-email"]');
 
 // Обробники подій для валідації під час введення
-nameField.addEventListener('input', validateForm);
-emailField.addEventListener('input', validateForm);
+nameField?.addEventListener('input', validateForm);
+emailField?.addEventListener('input', validateForm);
 
 // Відкриття модального вікна при натисканні на кнопку "Стати учасником"
-joinBtn.addEventListener('click', openModal);
+joinBtn?.addEventListener('click', openModal);
 
 // Закриття модального вікна при натисканні на кнопку "X"
-closeBtn.addEventListener('click', closeModal);
-sendDone.addEventListener('click', closeModal);
+closeBtn?.addEventListener('click', closeModal);
+sendDone?.addEventListener('click', closeModal);
 
 // Закриття модального вікна при натисканні на бекдроп
-joinForm.addEventListener('click', function (event) {
+joinForm?.addEventListener('click', function (event) {
   if (event.target === joinForm) {
     closeModal();
   }

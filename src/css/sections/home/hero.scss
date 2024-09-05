@@ -111,9 +111,20 @@
   .container {
     height: 100%;
   }
+
+  .splide {
+    height: 100% !important;
+  }
+  .splide__track {
+    height: 100% !important;
+  }
+  .splide__arrow {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }
 
-.arrows {
+.hero-arrows {
   &__body {
     position: relative;
   }
@@ -182,17 +193,6 @@
   }
 }
 
-.splide {
-  height: 100% !important;
-}
-.splide__track {
-  height: 100% !important;
-}
-.splide__arrow {
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
 @media screen and (max-width: 960px) {
   .hero {
     &__content {
@@ -204,7 +204,7 @@
     }
   }
 
-  .arrows {
+  .hero-arrows {
     &__box {
       display: flex;
       align-items: center;
