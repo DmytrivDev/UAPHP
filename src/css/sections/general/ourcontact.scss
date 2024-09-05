@@ -182,7 +182,7 @@
       line-height: 1.42;
     }
   }
-  &__btn {
+  &__send {
     &.disabled {
       cursor: no-drop;
       color: var(--ch);
@@ -193,7 +193,7 @@
       }
     }
   }
-  &__btn-wrapp {
+  &__send-wrapp {
   }
 
   .title2 {
@@ -229,6 +229,20 @@
     &__form {
       width: 27rem;
     }
+    &__label {
+      input {
+        padding: 1rem 2.8rem 1rem 1.5rem;
+      }
+      textarea {
+        height: 6.5rem;
+      }
+      span {
+        bottom: 1rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-size: 1.25rem 1.25rem;
+      }
+    }
     &__form-wrapp {
       gap: 1.5rem;
       margin-bottom: 0.75rem;
@@ -246,7 +260,7 @@
     &__form {
       width: 100%;
     }
-    &__btn-wrapp {
+    &__send-wrapp {
       display: flex;
       justify-content: center;
     }

@@ -8,6 +8,7 @@
 /* General */
 @import url('./sections/general/cookie.scss');
 @import url('./sections/general/join.scss');
+@import url('./sections/general/joinform.scss');
 @import url('./sections/general/ourcontact.scss');
 
 /* Header */
@@ -20,6 +21,7 @@
 @import url('./sections/home/banner.scss');
 @import url('./sections/home/current.scss');
 @import url('./sections/home/mission.scss');
+@import url('./sections/home/function.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
