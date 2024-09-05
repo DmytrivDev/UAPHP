@@ -1,0 +1,129 @@
+.mission {
+  &__body {
+    position: relative;
+  }
+  &__content {
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__img-wrapp {
+    position: relative;
+    width: 26rem;
+    flex-shrink: 0;
+    img {
+      z-index: 1;
+    }
+  }
+  &__block-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 6.375rem);
+    grid-template-rows: repeat(2, 6.375rem);
+    div {
+      &:nth-child(1) {
+        background-color: var(--ca);
+      }
+      &:nth-child(2) {
+        background-color: var(--cb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background-color: var(--cs);
+      }
+      &:nth-child(4) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        background-color: var(--ca);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    li {
+      background-color: var(--cn);
+      padding: 1.5rem;
+      p {
+        color: var(--cd);
+      }
+    }
+  }
+  &__link-wrapp {
+    position: absolute;
+    top: 4rem;
+    right: 1.28rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title2 {
+    padding-right: 13.2475rem;
+    max-width: 55rem;
+    margin-bottom: 2.06rem;
+  }
+  .title4 {
+    line-height: 1.16;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .mission {
+    &__content {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    &__img-wrapp {
+      width: 100%;
+      height: 16rem;
+    }
+    &__block-grid {
+      grid-template-columns: repeat(3, 4rem);
+      grid-template-rows: repeat(2, 4rem);
+      div {
+        &:nth-child(2) {
+          span {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+    &__list {
+      li {
+        p {
+          font-size: 0.875rem;
+          line-height: 1.42;
+        }
+      }
+    }
+    &__link-wrapp {
+      position: static;
+    }
+
+    .title2 {
+      padding-right: 0;
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .title4 {
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
