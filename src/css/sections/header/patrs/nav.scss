@@ -51,6 +51,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      transform: translateY(0.1rem);
       transition: all 150ms ease-in;
       &::before {
         content: "";
@@ -86,6 +87,9 @@
       color: var(--cw);
       font-size: 0.875rem;
       font-weight: 700;
+      span {
+        transform: translateY(0.1rem);
+      }
       &::before {
         content: "";
         width: 1rem;

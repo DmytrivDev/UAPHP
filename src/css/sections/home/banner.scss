@@ -21,10 +21,10 @@
     will-change: transform;
 
     &.carousell-part1 {
-      animation: animate1 40s -40s linear infinite;
+      animation: animate1 30s -30s linear infinite;
     }
     &.carousell-part2 {
-      animation: animate2 40s -20s linear infinite;
+      animation: animate2 30s -15s linear infinite;
     }
   }
   &__item {
@@ -75,11 +75,11 @@
       gap: 0.5rem;
 
       &.carousell-part1 {
-        animation: animate1 30s -30s linear infinite;
+        animation: animate1 20s -20s linear infinite;
         padding-right: 0.25rem;
       }
       &.carousell-part2 {
-        animation: animate2 30s -15s linear infinite;
+        animation: animate2 20s -10s linear infinite;
         padding-left: 0.25rem;
       }
     }
