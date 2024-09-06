@@ -7,6 +7,10 @@ body {
   font-weight: 400;
 }
 
+input, textarea {
+  font-family: var(--ff);
+}
+
 .overhide {
   overflow: hidden;
 }
