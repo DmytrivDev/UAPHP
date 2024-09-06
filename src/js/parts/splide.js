@@ -116,7 +116,7 @@ const instFunctionSlider = () => {
 
   if (slider) {
     const options = {
-      type: 'slider',
+      type: 'slide',
       speed: 1000,
       pagination: false,
       updateOnMove: true,
@@ -128,7 +128,6 @@ const instFunctionSlider = () => {
           width: 'auto',
           speed: 500,
           perPage: 1,
-          perMove: 1,
         },
       },
     };

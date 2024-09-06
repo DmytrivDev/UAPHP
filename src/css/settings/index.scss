@@ -134,6 +134,11 @@
       background-color: var(--cb);
     }
   }
+  &.bgl {
+    .btn-circle {
+      background-color: var(--cl);
+    }
+  }
   &.bgw {
     .btn-circle {
       background-color: var(--cw);
