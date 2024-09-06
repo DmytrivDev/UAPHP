@@ -32,8 +32,7 @@
 @media screen and (max-width: 960px) {
   .team {
     &__list {
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      margin-bottom: 2rem;
+      grid-template-columns: repeat(3, 1fr);
       li {
         p {
           font-size: 0.875rem;
@@ -42,12 +41,9 @@
       }
     }
     &__img-wrapp {
-      height: 24rem;
+      padding-top: 120%;
+      height: auto;
       margin-bottom: 1rem;
-    }
-    &__btn-wrapp {
-      display: flex;
-      justify-content: center;
     }
 
     .title2 {
@@ -55,6 +51,53 @@
     }
     .title4 {
       line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .team {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        display: none;
+        p {
+          font-size: 0.875rem;
+          line-height: 1.42;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: block;
+        }
+      }
+      &.add-item {
+        li {
+          display: block;
+        }
+      }
+    }
+    &__img-wrapp {
+      padding-top: 120%;
+      height: auto;
+    }
+    &__btn-wrapp {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      &.is-hidden {
+        display: none;
+      }
+    }
+    &__more {
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .team {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

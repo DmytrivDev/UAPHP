@@ -27,6 +27,7 @@
 @import url('./sections/home/working.scss');
 
 /* About */
+@import url('./sections/about/base.scss');
 @import url('./sections/about/team.scss');
 
 /* Footer */
