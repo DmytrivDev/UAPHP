@@ -1,0 +1,187 @@
+.areas {
+  &__body {
+    position: relative;
+  }
+  &__list {
+    border-top: 0.0625rem solid var(--co);
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__item {
+    position: relative;
+    padding: 1.5rem;
+    background-color: var(--cs);
+    h5 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.33;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--cd);
+      font-size: 0.875rem;
+      line-height: 1.42;
+    }
+
+    .areas__icon-wrapp {
+      filter: brightness(0) saturate(100%) invert(30%) sepia(81%)
+        saturate(2043%) hue-rotate(202deg) brightness(92%) contrast(89%);
+    }
+
+    &:nth-child(2) {
+      background-color: var(--ci);
+      .areas__icon-wrapp {
+        filter: brightness(0) saturate(100%) invert(9%) sepia(57%)
+          saturate(3892%) hue-rotate(227deg) brightness(112%) contrast(100%);
+      }
+      .areas__block-grid {
+        div {
+          background-color: var(--cu);
+          &:nth-child(2) {
+            background-color: var(--ci);
+          }
+          &:nth-child(3) {
+            background-color: var(--cw);
+          }
+          &:nth-child(4) {
+            background-color: var(--cw);
+          }
+          &:nth-child(6) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: var(--cj);
+      .areas__icon-wrapp {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(90%)
+          saturate(5516%) hue-rotate(350deg) brightness(88%) contrast(91%);
+      }
+      .areas__block-grid {
+        div {
+          background-color: var(--cw);
+          &:nth-child(2) {
+            background-color: var(--cj);
+          }
+          &:nth-child(3) {
+            background-color: var(--cp);
+          }
+          &:nth-child(4) {
+            background-color: var(--cp);
+          }
+          &:nth-child(6) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      background-color: var(--ck);
+      .areas__icon-wrapp {
+        filter: brightness(0) saturate(100%) invert(51%) sepia(88%)
+          saturate(1736%) hue-rotate(153deg) brightness(94%) contrast(101%);
+      }
+      .areas__block-grid {
+        div {
+          background-color: var(--cy);
+          &:nth-child(1) {
+            background-color: var(--cw);
+          }
+          &:nth-child(2) {
+            background-color: var(--ck);
+          }
+          &:nth-child(5) {
+            background-color: var(--cw);
+          }
+        }
+      }
+    }
+  }
+  &__icon-wrapp {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  &__block-grid {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 2rem);
+    grid-template-rows: repeat(3, 2rem);
+    div {
+      background-color: var(--cw);
+      &:nth-child(2) {
+        background-color: var(--cs);
+      }
+      &:nth-child(3) {
+        background-color: var(--ca);
+      }
+      &:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(5) {
+        background-color: var(--cs);
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(6) {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+      }
+    }
+  }
+  &__btn-wrapp {
+    position: absolute;
+    top: 3.8rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title2 {
+    max-width: 35rem;
+    padding-right: 12.125rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .areas {
+    &__list {
+      padding-top: 1.5rem;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    &__item {
+      padding: 1.5rem 1rem;
+      h5 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+      }
+    }
+    &__icon-wrapp {
+      margin-bottom: 2rem;
+    }
+    &__btn-wrapp {
+      position: static;
+    }
+
+    .title2 {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
