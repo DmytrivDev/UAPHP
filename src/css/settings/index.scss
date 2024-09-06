@@ -54,6 +54,10 @@
   font-weight: 700;
   line-height: 1.42;
   transition: all 150ms ease-in;
+  span {
+    display: block;
+    transform: translateY(0.08rem);
+  }
 
   &.bgw {
     color: var(--cb);
