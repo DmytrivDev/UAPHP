@@ -27,6 +27,9 @@
 @import url('./sections/home/working.scss');
 
 /* About */
+@import url('./sections/about/about.scss');
+
+@import url('./sections/about/values.scss');
 @import url('./sections/about/slogan.scss');
 @import url('./sections/about/areas.scss');
 @import url('./sections/about/base.scss');
