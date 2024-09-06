@@ -24,6 +24,7 @@
 @import url('./sections/home/function.scss');
 @import url('./sections/home/closest.scss');
 @import url('./sections/home/partners.scss');
+@import url('./sections/home/working.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

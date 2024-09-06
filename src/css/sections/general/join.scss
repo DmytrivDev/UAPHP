@@ -1,11 +1,14 @@
 .join {
-  margin-top: 10rem;
-  overflow: hidden;
-
-  &__boy {
+  &__wrapp {
+  }
+  &__boby {
     position: relative;
     background-color: var(--cb);
     padding: 3rem;
+    overflow: hidden;
+  }
+  &__box {
+    max-width: 35rem;
   }
   &__title {
     color: var(--cw);
@@ -19,7 +22,6 @@
     color: var(--cw);
     font-size: 1.125rem;
     line-height: 1.33;
-    max-width: 35rem;
     margin-bottom: 1.5rem;
   }
   &__vector {
@@ -32,11 +34,16 @@
 
 @media screen and (max-width: 960px) {
   .join {
-    margin-top: 6rem;
-    background-color: var(--cb);
-
-    &__boy {
+    &__wrapp {
+      overflow: hidden;
+      background-color: var(--cb);
+    }
+    &__boby {
+      overflow: visible;
       padding: 2rem 0 3.25rem 0;
+    }
+    &__box {
+      max-width: 27rem;
     }
     &__title {
       font-size: 1.75rem;
@@ -47,7 +54,6 @@
     &__text {
       font-size: 1rem;
       line-height: 1.5;
-      max-width: 27rem;
       margin-bottom: 2.5rem;
     }
     &__vector {
