@@ -1,0 +1,22 @@
+.slogan {
+  .title3 {
+    text-align: center;
+    a {
+      color: var(--cb);
+      text-decoration-line: underline;
+      transition: all 150ms ease-in;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .slogan {
+    .title3 {
+      font-size: 1.125rem;
+      line-height: 1.55;
+    }
+  }
+}
