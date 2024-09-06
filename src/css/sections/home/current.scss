@@ -31,6 +31,10 @@
     border: 0.0625rem solid var(--cw);
     font-size: 0.75rem;
     font-weight: 600;
+    span {
+      display: block;
+      transform: translateY(0.08rem);
+    }
   }
   &__info {
     position: absolute;
@@ -184,6 +188,10 @@
     border: 0.0625rem solid var(--cm);
     font-size: 0.75rem;
     font-weight: 600;
+    span {
+      display: block;
+      transform: translateY(0.08rem);
+    }
   }
   &__info {
     display: flex;
