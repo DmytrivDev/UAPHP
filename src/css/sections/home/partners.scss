@@ -1,0 +1,97 @@
+.partners {
+  &__body {
+    background-color: var(--cn);
+    padding: 4rem 0;
+  }
+  &__carousell {
+    display: flex;
+    align-items: center;
+    &:hover {
+      .partners__list {
+        animation-play-state: paused !important;
+      }
+    }
+  }
+  &__list {
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    will-change: transform;
+    width: 100%;
+    animation: animateP1 30s -30s linear infinite;
+
+    li {
+      position: relative;
+      height: 8rem;
+      width: 19.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &:nth-child(2) {
+      animation: animateP2 30s -15s linear infinite;
+    }
+  }
+
+  .title2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes animateP1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animateP2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .partners {
+    &__body {
+      padding: 3rem 0;
+    }
+    &__list {
+      padding-left: 1.5rem;
+      gap: 1.5rem;
+      animation: animateP1 20s -20s linear infinite;
+
+      li {
+        height: 4rem;
+        width: 9.5625rem;
+      }
+
+      &:nth-child(2) {
+        animation: animateP2 20s -10s linear infinite;
+      }
+    }
+
+    .title2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

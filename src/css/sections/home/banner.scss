@@ -21,10 +21,10 @@
     will-change: transform;
 
     &.carousell-part1 {
-      animation: animate1 30s -30s linear infinite;
+      animation: animateB1 30s -30s linear infinite;
     }
     &.carousell-part2 {
-      animation: animate2 30s -15s linear infinite;
+      animation: animateB2 30s -15s linear infinite;
     }
   }
   &__item {
@@ -48,7 +48,7 @@
   }
 }
 
-@keyframes animate1 {
+@keyframes animateB1 {
   0% {
     transform: translateX(calc(100% + var(--move1-p)));
   }
@@ -57,7 +57,7 @@
   }
 }
 
-@keyframes animate2 {
+@keyframes animateB2 {
   0% {
     transform: translateX(var(--move2-p));
   }
@@ -75,11 +75,11 @@
       gap: 0.5rem;
 
       &.carousell-part1 {
-        animation: animate1 20s -20s linear infinite;
+        animation: animateB1 20s -20s linear infinite;
         padding-right: 0.25rem;
       }
       &.carousell-part2 {
-        animation: animate2 20s -10s linear infinite;
+        animation: animateB2 20s -10s linear infinite;
         padding-left: 0.25rem;
       }
     }

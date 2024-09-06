@@ -23,6 +23,7 @@
 @import url('./sections/home/mission.scss');
 @import url('./sections/home/function.scss');
 @import url('./sections/home/closest.scss');
+@import url('./sections/home/partners.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
