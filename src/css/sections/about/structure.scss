@@ -94,6 +94,11 @@
     width: 16.5rem;
   }
 
+  &__vector-lm,
+  &__vector-rm {
+    display: none;
+  }
+
   .title2 {
     position: absolute;
     bottom: 2rem;
@@ -132,17 +137,51 @@
     &__list-patr2,
     &__list-patr3 {
       li {
+        position: relative;
         font-size: 1rem;
         line-height: 1.25;
       }
     }
 
     &__list-patr1 {
-      margin-bottom: 2.63rem;
+      margin-bottom: 2.5rem;
+      li {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -4.2rem;
+          transform: translateY(-50%);
+          width: 0.75rem;
+          height: 3rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='40' viewBox='0 0 12 40' fill='none'%3E%3Cpath d='M5 10L0.226497 -4.66758e-07L11.7735 4.66758e-07L7 10L5 10ZM7 30L11.7735 40L0.226497 40L5 30L7 30ZM7 9L7 31L5 31L5 9L7 9Z' fill='white'/%3E%3C/svg%3E");
+        }
+      }
     }
     &__list-patr2 {
       gap: 1.5rem;
-      margin-bottom: 2.63rem;
+      margin-bottom: 2.5rem;
+      li {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -2.48rem;
+          transform: translateY(-50%);
+          width: 0.75rem;
+          height: 1.75rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='27' viewBox='0 0 12 27' fill='none'%3E%3Cpath d='M7 10L11.7735 4.66759e-07L0.226497 -4.66759e-07L5 10L7 10ZM5 17L0.226497 27L11.7735 27L7 17L5 17ZM5 9L5 18L7 18L7 9L5 9Z' fill='white'/%3E%3C/svg%3E");
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
     &__list-patr3 {
       height: auto;
@@ -150,14 +189,27 @@
       gap: 1.5rem;
     }
 
-    &__vector-1d {
-      display: none;
-    }
-    &__vector-td {
-      display: none;
-    }
+    &__vector-1d,
+    &__vector-td,
     &__vector-bd {
       display: none;
+    }
+
+    &__vector-lm {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      bottom: 6.1rem;
+      left: -2.5rem;
+      width: 3rem;
+    }
+    &__vector-rm {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      bottom: 1.1rem;
+      right: -2.5rem;
+      width: 3rem;
     }
 
     .title2 {
