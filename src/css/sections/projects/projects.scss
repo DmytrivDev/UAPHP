@@ -1,0 +1,13 @@
+.projectsPage {
+  .join {
+    padding-bottom: 10rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .projectsPage {
+    .join {
+      padding-bottom: 6rem;
+    }
+  }
+}

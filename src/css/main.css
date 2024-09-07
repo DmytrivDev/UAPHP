@@ -37,5 +37,10 @@
 @import url('./sections/about/structure.scss');
 @import url('./sections/about/team.scss');
 
+/* Projects */
+@import url('./sections/projects/projects.scss');
+
+@import url('./sections/projects/directions.scss');
+
 /* Footer */
 @import url('./sections/footer/footer.scss');
