@@ -57,6 +57,14 @@ function submitForm() {
 
 // Функція для відкриття модального вікна
 function openModal() {
+  const formLabel = document.querySelectorAll('.joinform__label');
+  formLabel.forEach(label => {
+    label.classList.remove('error');
+  });
+
+  sendBtn.classList.remove('disabled');
+  sendBtn.disabled = false;
+
   patr1.classList.add('is-transition', 'is-step');
   patr2.classList.remove('is-transition', 'is-step');
 
