@@ -41,6 +41,7 @@
 @import url('./sections/projects/projects.scss');
 
 @import url('./sections/projects/directions.scss');
+@import url('./sections/projects/statistics.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

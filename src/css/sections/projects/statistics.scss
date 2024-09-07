@@ -1,0 +1,152 @@
+.statistics {
+  &__body {
+  }
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__item-part1 {
+    background-color: var(--cn);
+    flex-shrink: 0;
+    width: 26rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    p {
+      flex-grow: 1;
+    }
+    span {
+      color: var(--cb);
+      font-size: 8rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__item-part2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .statistics__sub-list1,
+  .statistics__sub-list2 {
+    display: flex;
+    gap: 1.5rem;
+    li {
+      width: 100%;
+      padding: 1.5rem;
+      background-color: var(--cn);
+      span {
+        color: var(--cr);
+        font-size: 3.5rem;
+        font-weight: 600;
+        line-height: 1.14;
+        letter-spacing: -0.04em;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  .statistics__sub-list1 {
+    li {
+      &:first-child {
+        flex-shrink: 0;
+        width: 19.0625rem;
+        span {
+          color: var(--cl);
+        }
+      }
+      &:last-child {
+        span {
+          color: var(--cb);
+        }
+      }
+    }
+  }
+  .statistics__sub-list2 {
+    li {
+      &:first-child {
+        span {
+          color: var(--cr);
+        }
+      }
+      &:last-child {
+        flex-shrink: 0;
+        width: 19.0625rem;
+        span {
+          color: var(--cv);
+        }
+      }
+    }
+  }
+
+  .title2 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .statistics {
+    &__body {
+    }
+    &__list {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    &__item-part1 {
+      width: 100%;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      p {
+        flex-grow: 0;
+        font-size: 0.875rem;
+        line-height: 1.42;
+      }
+      span {
+        font-size: 6rem;
+        line-height: 1.08;
+      }
+    }
+
+    &__item-part2 {
+      gap: 1rem;
+    }
+    .statistics__sub-list1,
+    .statistics__sub-list2 {
+      flex-direction: column;
+      gap: 1rem;
+      li {
+        width: 100%;
+        padding: 1.5rem 1rem;
+        span {
+          display: block;
+          font-size: 3rem;
+          line-height: 1;
+          margin-bottom: 1.5rem;
+        }
+        P {
+          font-size: 0.875rem;
+          line-height: 1.42;
+        }
+      }
+    }
+    .statistics__sub-list1 {
+      li {
+        &:first-child {
+          width: 100%;
+        }
+      }
+    }
+    .statistics__sub-list2 {
+      li {
+        &:last-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
