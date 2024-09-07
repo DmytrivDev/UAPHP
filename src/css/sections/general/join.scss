@@ -1,7 +1,7 @@
 .join {
   &__wrapp {
   }
-  &__boby {
+  &__body {
     position: relative;
     background-color: var(--cb);
     padding: 3rem;
@@ -38,7 +38,7 @@
       overflow: hidden;
       background-color: var(--cb);
     }
-    &__boby {
+    &__body {
       overflow: visible;
       padding: 2rem 0 3.25rem 0;
     }

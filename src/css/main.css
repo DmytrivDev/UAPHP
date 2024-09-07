@@ -10,6 +10,8 @@
 @import url('./sections/general/join.scss');
 @import url('./sections/general/joinform.scss');
 @import url('./sections/general/ourcontact.scss');
+@import url('./sections/general/base.scss');
+@import url('./sections/general/mailing.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');
@@ -33,7 +35,6 @@
 @import url('./sections/about/slogan.scss');
 @import url('./sections/about/vision.scss');
 @import url('./sections/about/areas.scss');
-@import url('./sections/about/base.scss');
 @import url('./sections/about/structure.scss');
 @import url('./sections/about/team.scss');
 
@@ -42,6 +43,9 @@
 
 @import url('./sections/projects/directions.scss');
 @import url('./sections/projects/statistics.scss');
+
+/* Project */
+@import url('./sections/project/project.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
