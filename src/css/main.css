@@ -34,6 +34,7 @@
 @import url('./sections/about/vision.scss');
 @import url('./sections/about/areas.scss');
 @import url('./sections/about/base.scss');
+@import url('./sections/about/structure.scss');
 @import url('./sections/about/team.scss');
 
 /* Footer */
