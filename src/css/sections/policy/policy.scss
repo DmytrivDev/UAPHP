@@ -1,0 +1,59 @@
+.policy {
+  margin-top: 4.4725rem;
+
+  &__body {
+    padding: 6rem 0 3rem 0;
+  }
+  &__wrapp {
+    display: grid;
+    grid-template-columns: 19.125rem 1fr;
+    gap: 8.37rem;
+    padding-top: 6rem;
+  }
+  &__sidebar {
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    a {
+      display: block;
+      color: var(--cm);
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.42;
+      transition: all 150ms ease-in;
+      &:hover {
+        color: var(--ch);
+      }
+    }
+  }
+  &__content {
+  }
+
+  .title1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .policy {
+    margin-top: 8.9781rem;
+
+    &__body {
+      padding: 3rem 0 1.5rem 0;
+    }
+    &__wrapp {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-top: 3rem;
+    }
+    &__sidebar {
+      display: none;
+    }
+
+    .title1 {
+      text-align: start;
+    }
+  }
+}

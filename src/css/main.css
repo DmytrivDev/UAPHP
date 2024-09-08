@@ -4,6 +4,7 @@
 @import url('./settings/default.scss');
 @import url('./settings/general.scss');
 @import url('./settings/index.scss');
+@import url('./settings/embeded.scss');
 
 /* General */
 @import url('./sections/general/headerStyle.scss');
@@ -57,6 +58,9 @@
 
 /* Contacts */
 @import url('./sections/contacts/contacts.scss');
+
+/* Policy */
+@import url('./sections/policy/policy.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

@@ -51,7 +51,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      transform: translateY(0.1rem);
+      transform: translateY(0.08rem);
       transition: all 150ms ease-in;
       &::before {
         content: "";
@@ -88,7 +88,7 @@
       font-size: 0.875rem;
       font-weight: 700;
       span {
-        transform: translateY(0.1rem);
+        transform: translateY(0.08rem);
       }
       &::before {
         content: "";
