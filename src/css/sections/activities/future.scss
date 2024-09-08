@@ -1,0 +1,24 @@
+.future {
+  &__body {
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .future {
+    &__top {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

@@ -232,7 +232,8 @@
 
 .function-arrows,
 .paragraph-arrows,
-.archive-pagination {
+.archive-pagination,
+.future-pagination {
   display: flex;
   justify-content: center;
   &__body {
@@ -319,6 +320,145 @@
   }
 }
 
+.card {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  &__item {
+    min-height: 18rem;
+    display: flex;
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 13.75rem;
+    background-color: var(--cb);
+    color: var(--cn);
+    flex-shrink: 0;
+  }
+  &__box {
+  }
+  &__date {
+    flex-grow: 1;
+    color: inherit;
+    p {
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+  &__duration,
+  &__points {
+    color: inherit;
+    p {
+      font-size: 0.875rem;
+      line-height: 1.42;
+      margin-bottom: 0.25rem;
+    }
+    h5 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.33;
+    }
+  }
+  &__duration {
+    margin-bottom: 0.5rem;
+  }
+  &__points {
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: var(--cn);
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  &__lead {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    li {
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      border: 0.0625rem solid var(--cm);
+      span {
+        display: block;
+        transform: translateY(0.08rem);
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
+  }
+  &__name {
+    display: block;
+    color: var(--cm);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: 2.5rem;
+    transition: all 150ms ease-in;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__add {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    color: var(--cm);
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    span {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.0625rem;
+        background-color: var(--cm);
+        transition: all 150ms ease-in;
+      }
+    }
+    &:hover {
+      span {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-0.1rem);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M7.99935 2.66675V13.3334M13.3327 8.00008H2.66602' stroke='%230B0B0B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .sec-pt {
     padding-top: 6rem;
@@ -394,7 +534,8 @@
 
   .function-arrows,
   .paragraph-arrows,
-  .archive-pagination {
+  .archive-pagination,
+  .future-pagination {
     &__body {
       justify-content: space-between;
       width: 100%;
@@ -423,6 +564,52 @@
     &__number {
       width: 3rem;
       font-size: 0.875rem;
+    }
+  }
+
+  .card {
+    &__list {
+      margin-bottom: 2rem;
+    }
+    &__item {
+      min-height: auto;
+      flex-direction: column;
+    }
+
+    &__aside {
+      padding: 1.5rem 1rem;
+      width: 100%;
+      min-height: 11.75rem;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__duration {
+      margin-bottom: 0;
+    }
+
+    &__info {
+      padding: 1.5rem 1rem;
+    }
+    &__name {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    &__lead {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      li {
+        padding: 0.5rem 0.75rem;
+        span {
+          transform: translateY(0.08rem);
+        }
+      }
+    }
+    &__add {
+      left: 1rem;
     }
   }
 }
