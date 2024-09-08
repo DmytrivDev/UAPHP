@@ -52,5 +52,11 @@
 @import url('./sections/activities/future.scss');
 @import url('./sections/activities/archive.scss');
 
+/* Cpd */
+@import url('./sections/cpd/cpd.scss');
+
+/* Contacts */
+@import url('./sections/contacts/contacts.scss');
+
 /* Footer */
 @import url('./sections/footer/footer.scss');
