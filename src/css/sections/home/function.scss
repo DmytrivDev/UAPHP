@@ -118,7 +118,8 @@
   }
 }
 
-.function-arrows {
+.function-arrows,
+.paragraph-arrows {
   display: flex;
   justify-content: center;
   &__body {
@@ -239,7 +240,8 @@
     }
   }
 
-  .function-arrows {
+  .function-arrows,
+  .paragraph-arrows {
     &__body {
       justify-content: space-between;
       width: 100%;

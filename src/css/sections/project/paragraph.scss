@@ -1,0 +1,247 @@
+.paragraph {
+  &__body {
+    display: grid;
+    grid-template-columns: 19.125rem 1fr;
+    gap: 8.37rem;
+  }
+  &__sidebar {
+    margin-top: 4rem;
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    a {
+      display: block;
+      color: var(--cm);
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.42;
+      transition: all 150ms ease-in;
+      &:hover {
+        color: var(--ch);
+      }
+    }
+  }
+
+  &__content {
+    p {
+      margin-top: 3rem;
+    }
+    a {
+      color: var(--cb);
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  &__tagline {
+    margin-top: 4rem;
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+    p {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__points {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    li {
+      background-color: var(--cs);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cb);
+        margin-bottom: 1.5rem;
+        span {
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(7499%) hue-rotate(170deg) brightness(100%) contrast(103%);
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      h5 {
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.33;
+      }
+      p {
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        background-color: var(--ck);
+        div {
+          background-color: var(--cv);
+        }
+      }
+      &:nth-child(3) {
+        background-color: var(--cj);
+        div {
+          background-color: var(--cr);
+        }
+      }
+      &:nth-child(4) {
+        background-color: var(--ci);
+        div {
+          background-color: var(--cl);
+        }
+      }
+    }
+  }
+
+  &__uploaded {
+    margin-top: 3rem;
+    .file-link {
+      background-color: var(--cn);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .file-name {
+        color: var(--cm);
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.55;
+      }
+
+      &:hover {
+        .file-name {
+          color: var(--cb);
+        }
+      }
+    }
+  }
+
+  &__swiper {
+    margin-top: 3rem;
+  }
+  &__container {
+    margin-bottom: 3rem;
+  }
+  &__img-wrapp {
+    position: relative;
+    height: 24rem;
+    width: 100%;
+  }
+
+  .splide__slide {
+    width: 100% !important;
+  }
+  .splide__arrow {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .paragraph {
+    &__body {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    &__sidebar {
+      display: none;
+    }
+
+    &__content {
+      p {
+        margin-top: 2rem;
+        font-size: 0.875rem;
+        line-height: 1.42;
+      }
+      a {
+        color: var(--cb);
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    &__tagline {
+      margin-top: 3rem;
+      h3 {
+        font-size: 1.125rem;
+        line-height: 1.55;
+      }
+      p {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__points {
+      margin-top: 2rem;
+      gap: 1rem;
+      li {
+        padding: 1.5rem 1rem;
+        div {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+
+    &__uploaded {
+      margin-top: 2rem;
+      .file-link {
+        gap: 0.5rem;
+
+        .file-name {
+          line-height: 1.33;
+        }
+      }
+    }
+
+    &__swiper {
+      margin-top: 2rem;
+    }
+    &__container {
+      margin-bottom: 1.5rem;
+    }
+    &__img-wrapp {
+      height: 16rem;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .paragraph {
+    &__points {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

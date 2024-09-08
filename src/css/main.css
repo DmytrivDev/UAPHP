@@ -46,6 +46,7 @@
 
 /* Project */
 @import url('./sections/project/project.scss');
+@import url('./sections/project/paragraph.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

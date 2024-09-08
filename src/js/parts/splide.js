@@ -207,3 +207,92 @@ const instFunctionSlider = () => {
   }
 };
 instFunctionSlider();
+
+const instParagraphSlider = () => {
+  const slider = document.querySelector('.paragraph__splide');
+
+  if (slider) {
+    const options = {
+      type: 'slide',
+      speed: 1000,
+      pagination: false,
+      updateOnMove: true,
+      perPage: 1,
+      gap: '0',
+    };
+
+    const splide = new Splide(slider, options).mount();
+
+    updateSlideNumber(splide);
+    updateArrowsState(splide);
+
+    splide.on('move', () => {
+      updateSlideNumber(splide);
+      updateArrowsState(splide);
+    });
+
+    window.addEventListener('resize', () => {
+      updateSlideNumber(splide);
+      updateArrowsState(splide);
+    });
+
+    arrowsClicker();
+
+    function arrowsClicker() {
+      const container = document.querySelector('.paragraph__splide');
+
+      const arrowsNext = document.querySelector('.paragraph-arrows__next');
+      const arrowsPrev = document.querySelector('.paragraph-arrows__prev');
+
+      arrowsNext.addEventListener('click', () => {
+        container.querySelector('.splide__arrow--next').click();
+      });
+
+      arrowsPrev.addEventListener('click', () => {
+        container.querySelector('.splide__arrow--prev').click();
+      });
+    }
+
+    function updateSlideNumber(slide) {
+      const totalSlides = Math.ceil(
+        slide.Components.Slides.getLength() / slide.options.perPage
+      );
+
+      const currentIndex = Math.ceil(slide.index / slide.options.perPage) + 1;
+
+      const spanElements = document.querySelectorAll(
+        '.paragraph-arrows__number'
+      );
+
+      spanElements.forEach(spanElement => {
+        spanElement.textContent = `${currentIndex}/${totalSlides}`;
+      });
+    }
+
+    function updateArrowsState(slide) {
+      const arrowsNext = document.querySelector('.paragraph-arrows__next');
+      const arrowsPrev = document.querySelector('.paragraph-arrows__prev');
+
+      const totalSlides = Math.ceil(
+        slide.Components.Slides.getLength() / slide.options.perPage
+      );
+
+      if (Math.ceil(slide.index / slide.options.perPage) === totalSlides - 1) {
+        arrowsNext.disabled = true;
+        arrowsNext.classList.add('is-disabled');
+      } else {
+        arrowsNext.disabled = false;
+        arrowsNext.classList.remove('is-disabled');
+      }
+
+      if (slide.index === 0) {
+        arrowsPrev.disabled = true;
+        arrowsPrev.classList.add('is-disabled');
+      } else {
+        arrowsPrev.disabled = false;
+        arrowsPrev.classList.remove('is-disabled');
+      }
+    }
+  }
+};
+instParagraphSlider();
