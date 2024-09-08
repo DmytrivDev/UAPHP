@@ -6,6 +6,8 @@
 @import url('./settings/index.scss');
 
 /* General */
+@import url('./sections/general/headerStyle.scss');
+
 @import url('./sections/general/cookie.scss');
 @import url('./sections/general/join.scss');
 @import url('./sections/general/joinform.scss');
@@ -29,8 +31,6 @@
 @import url('./sections/home/working.scss');
 
 /* About */
-@import url('./sections/about/about.scss');
-
 @import url('./sections/about/values.scss');
 @import url('./sections/about/slogan.scss');
 @import url('./sections/about/vision.scss');
@@ -40,13 +40,17 @@
 
 /* Projects */
 @import url('./sections/projects/projects.scss');
-
 @import url('./sections/projects/directions.scss');
 @import url('./sections/projects/statistics.scss');
 
 /* Project */
 @import url('./sections/project/project.scss');
 @import url('./sections/project/paragraph.scss');
+
+/* Activities */
+@import url('./sections/activities/activities.scss');
+@import url('./sections/activities/future.scss');
+@import url('./sections/activities/archive.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
