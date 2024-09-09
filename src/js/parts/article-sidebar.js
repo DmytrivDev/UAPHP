@@ -76,7 +76,7 @@ function articleSidebar(page) {
       const target = document.querySelector(href);
       if (!target) return;
 
-      const offset = target.offsetTop;
+      const offset = target.offsetTop + 10;
       const head = headerHeight;
       let ofF = offset;
 
