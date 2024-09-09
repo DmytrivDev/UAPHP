@@ -533,11 +533,16 @@
   gap: 1rem;
 }
 .facetwp-page {
+  cursor: pointer;
   width: 1.5rem;
   color: var(--cm);
   text-align: center;
   font-size: 1.125rem;
   font-weight: 600;
+  transition: all 150ms ease-in;
+  &:hover {
+    color: var(--cg);
+  }
 }
 .active {
   color: var(--cg);
