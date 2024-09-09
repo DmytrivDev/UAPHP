@@ -1,7 +1,7 @@
 .error {
   margin-top: 4.4725rem;
-  min-height: 570px;
-  height: 100vh;
+  min-height: calc(41.875rem - 4.4725rem);
+  height: calc(100vh - 4.4725rem);
 
   &__body {
     position: relative;
@@ -10,7 +10,7 @@
   &__content {
     position: absolute;
     top: 6rem;
-    left: 34.5rem;
+    right: 13.75rem;
     z-index: 2;
     width: 32.875rem;
   }
@@ -25,6 +25,7 @@
     color: var(--cd);
     margin-bottom: 2rem;
   }
+
   &__block-grid {
     position: absolute;
     z-index: 1;
@@ -33,6 +34,7 @@
     display: grid;
     grid-template-columns: repeat(8, 12.25rem);
     grid-template-rows: repeat(3, 12.25rem);
+    transform: translateX(-12.25rem);
     div {
       background-color: var(--cs);
       display: flex;
@@ -45,17 +47,145 @@
         text-transform: uppercase;
       }
       &:nth-child(1) {
+        background-color: var(--cb);
         grid-column: 3 / 4;
         grid-row: 1 / 2;
       }
-      &:nth-child(1) {
+      &:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(3) {
+        background-color: var(--ca);
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+      &:nth-child(5) {
+        background-color: var(--ca);
         grid-column: 3 / 4;
-        grid-row: 1 / 2;
+        grid-row: 3 / 4;
+      }
+      &:nth-child(6) {
+        grid-column: 5 / 6;
+        grid-row: 3 / 4;
+      }
+      &:nth-child(7) {
+        grid-column: 7 / 8;
+        grid-row: 3 / 4;
+      }
+      &:nth-child(8) {
+        background-color: var(--ca);
+        grid-column: 8 / 9;
+        grid-row: 3 / 4;
+      }
+      &:nth-child(9) {
+        grid-column: 8 / 9;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(10) {
+        display: none;
       }
     }
   }
 
   .container {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .error {
+    margin-top: 8.9781rem;
+    min-height: calc(51.125rem - 8.9781rem);
+    height: calc(100vh - 8.9781rem);
+
+    &__content {
+      right: 0;
+      width: auto;
+      max-width: 28rem;
+      margin-left: 6rem;
+    }
+    &__title {
+      font-size: 1.75rem;
+      line-height: 1.14;
+      margin-bottom: 0.5rem;
+    }
+    &__text {
+      font-size: 0.875rem;
+      line-height: 1.42;
+      margin-bottom: 1.5rem;
+    }
+
+    &__block-grid {
+      bottom: 12rem;
+      grid-template-columns:
+        4rem 4rem 4rem minmax(4rem, 1fr) 4rem minmax(4rem, 1fr)
+        4rem;
+      grid-template-rows: repeat(6, 4rem);
+      transform: translateX(-4rem);
+      width: 100%;
+      div {
+        span {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+        }
+        &:nth-child(1) {
+          background-color: var(--cb);
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+        &:nth-child(2) {
+          background-color: var(--ca);
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+        }
+        &:nth-child(3) {
+          background-color: var(--cs);
+          grid-column: 1 / 2;
+          grid-row: 3 / 4;
+        }
+        &:nth-child(4) {
+          background-color: var(--ca);
+        }
+        &:nth-child(5) {
+          background-color: var(--cs);
+          grid-column: 2 / 3;
+          grid-row: 4 / 5;
+        }
+        &:nth-child(6) {
+          background-color: var(--ca);
+          grid-column: 3 / 4;
+          grid-row: 5 / 6;
+        }
+        &:nth-child(7) {
+          background-color: var(--ca);
+          grid-column: 2 / 3;
+          grid-row: 6 / 7;
+        }
+        &:nth-child(8) {
+          background-color: var(--ca);
+          grid-column: 5 / 6;
+          grid-row: 5 / 6;
+        }
+        &:nth-child(9) {
+          grid-column: 7 / 8;
+          grid-row: 5 / 6;
+        }
+        &:nth-child(10) {
+          display: block;
+          background-color: var(--ca);
+          grid-column: 7 / 8;
+          grid-row: 4 / 5;
+        }
+      }
+    }
+
+    .btn-def {
+      padding: 0.875rem 3rem;
+    }
   }
 }
