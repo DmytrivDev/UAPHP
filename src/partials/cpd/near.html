@@ -3,18 +3,24 @@
     <div class="future__body">
       <div class="future__top">
         <h2 class="title2">Найближчі заходи</h2>
-        <ul class="choice">
-          <li>
-            <button type="button" class="choice__date">
-              <span>Спочатку нові</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="choice__type">
-              <span>Тип заходу: Лекція</span>
-            </button>
-          </li>
-        </ul>
+        <div class="filtercont">
+          <ul class="filter__list">
+            <li class="filter__item filter__sort">
+              <!-- <button type="button" class="filter__sort-btn choice"> -->
+              <button type="button" class="filter__sort-btn">
+                <span class="filter-new">Спочатку нові</span>
+                <span class="filter-old">Спочатку старі</span>
+              </button>
+            </li>
+            <li class="filter__item filter__type">
+              <select class="near__select">
+                <option value="Lecture" selected>Лекція</option>
+                <option value="Seminars">Семінари</option>
+                <option value="Activities">Заходи</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <ul class="card__list">

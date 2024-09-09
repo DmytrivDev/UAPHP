@@ -1,13 +1,21 @@
+.projectPage {
+  .wrapper {
+    overflow: visible;
+  }
+}
+
 .paragraph {
   &__body {
+    padding-top: 4rem;
     display: grid;
     grid-template-columns: 19.125rem 1fr;
     gap: 8.37rem;
   }
   &__sidebar {
-    margin-top: 4rem;
   }
   &__article {
+    position: sticky;
+    top: 4.75rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -18,15 +26,42 @@
       font-weight: 500;
       line-height: 1.42;
       transition: all 150ms ease-in;
-      &:hover {
-        color: var(--ch);
+      &.active {
+        color: var(--cb);
       }
     }
   }
 
   &__content {
+    & > *:first-child {
+      margin-top: 0 !important;
+    }
+    & > *:last-child {
+      margin-bottom: 0 !important;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+    }
+    b {
+      margin-top: 1.5rem;
+      display: block;
+      font-size: 1.125em;
+      font-weight: 500;
+      line-height: 1.556em;
+    }
     p {
-      margin-top: 3rem;
+      margin-top: 1.5rem;
     }
     a {
       color: var(--cb);
@@ -36,20 +71,8 @@
     }
   }
 
-  &__tagline {
-    margin-top: 4rem;
-    h3 {
-      font-size: 2rem;
-      font-weight: 500;
-      line-height: 1.25;
-    }
-    p {
-      margin-top: 1.5rem;
-    }
-  }
-
   &__points {
-    margin-top: 3rem;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -113,7 +136,7 @@
   }
 
   &__uploaded {
-    margin-top: 3rem;
+    margin-bottom: 3rem;
     .file-link {
       background-color: var(--cn);
       padding: 1rem 1.5rem;
@@ -148,7 +171,7 @@
   }
 
   &__swiper {
-    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   &__container {
     margin-bottom: 3rem;
@@ -171,6 +194,7 @@
 @media screen and (max-width: 960px) {
   .paragraph {
     &__body {
+      padding-top: 4rem;
       grid-template-columns: 1fr;
       gap: 0;
     }
@@ -179,32 +203,23 @@
     }
 
     &__content {
-      p {
-        margin-top: 2rem;
-        font-size: 0.875rem;
-        line-height: 1.42;
-      }
-      a {
-        color: var(--cb);
-        &:hover {
-          text-decoration-line: underline;
-        }
-      }
-    }
-
-    &__tagline {
-      margin-top: 3rem;
       h3 {
         font-size: 1.125rem;
         line-height: 1.55;
+        margin-top: 3rem;
+      }
+      b {
+        font-size: 1em;
+        line-height: 1.5em;
       }
       p {
-        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        line-height: 1.42;
       }
     }
 
     &__points {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
       gap: 1rem;
       li {
         padding: 1.5rem 1rem;
@@ -216,7 +231,7 @@
     }
 
     &__uploaded {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
       .file-link {
         gap: 0.5rem;
 
@@ -227,7 +242,7 @@
     }
 
     &__swiper {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
     &__container {
       margin-bottom: 1.5rem;
