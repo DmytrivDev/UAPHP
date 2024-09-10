@@ -1,0 +1,131 @@
+.article {
+  position: relative;
+  min-height: 40.625rem;
+  height: 100vh;
+
+  &__wrapp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 6.5rem 0 2rem 0;
+  }
+  &__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 27.5rem;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  &__lead {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 0.0625rem solid var(--cw);
+    span {
+      display: block;
+      color: var(--cw);
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.33;
+      transform: translateY(0.1rem);
+    }
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--cw);
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.33;
+      span {
+        transform: translateY(0.15rem);
+      }
+      &::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_25_22791)'%3E%3Cpath d='M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z' stroke='white' stroke-width='1.5'/%3E%3Cpath d='M8 5.33331V7.99998L9.33333 9.33331' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_25_22791'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      }
+      &:last-child {
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_25_22796)'%3E%3Cpath d='M12 1.33331V2.66665M4 1.33331V2.66665' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.66602 8.16213C1.66602 5.25729 1.66602 3.80485 2.50076 2.90243C3.33551 2 4.67901 2 7.36602 2H8.63268C11.3197 2 12.6632 2 13.4979 2.90243C14.3327 3.80485 14.3327 5.25729 14.3327 8.16213V8.50453C14.3327 11.4094 14.3327 12.8618 13.4979 13.7643C12.6632 14.6667 11.3197 14.6667 8.63268 14.6667H7.36602C4.67901 14.6667 3.33551 14.6667 2.50076 13.7643C1.66602 12.8618 1.66602 11.4094 1.66602 8.50453V8.16213Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 5.33331H14' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_25_22796'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+  &__title {
+    color: var(--cw);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  &__img-wrapp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  &__filter {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.88;
+    background: linear-gradient(
+      180deg,
+      rgba(15, 15, 15, 0.4) 0%,
+      rgba(15, 15, 15, 0.88) 100%
+    );
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .article {
+    min-height: 32rem;
+
+    &__wrapp {
+      padding: 10.5rem 0 1.5rem 0;
+    }
+    &__top {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__content {
+      padding-left: 0;
+    }
+    &__title {
+      font-size: 1.5rem;
+      line-height: 1.33;
+    }
+  }
+}

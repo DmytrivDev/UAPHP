@@ -1,3 +1,4 @@
+.articlePage,
 .projectPage {
   .wrapper {
     overflow: visible;
@@ -170,6 +171,33 @@
     }
   }
 
+  &__soc {
+    margin-bottom: 3rem;
+    p {
+      margin-top: 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.42;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        transition: all 150ms ease-in;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
   &__swiper {
     margin-bottom: 3rem;
   }
@@ -239,6 +267,10 @@
           line-height: 1.33;
         }
       }
+    }
+
+    &__soc {
+      margin-bottom: 2rem;
     }
 
     &__swiper {

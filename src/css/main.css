@@ -14,6 +14,7 @@
 @import url('./sections/general/joinform.scss');
 @import url('./sections/general/ourcontact.scss');
 @import url('./sections/general/base.scss');
+@import url('./sections/general/paragraph.scss');
 @import url('./sections/general/mailing.scss');
 
 /* Header */
@@ -46,7 +47,6 @@
 
 /* Project */
 @import url('./sections/project/project.scss');
-@import url('./sections/project/paragraph.scss');
 
 /* Activities */
 @import url('./sections/activities/activities.scss');
@@ -55,6 +55,10 @@
 
 /* Cpd */
 @import url('./sections/cpd/cpd.scss');
+
+/* Article */
+@import url('./sections/article/article.scss');
+@import url('./sections/article/similar.scss');
 
 /* Contacts */
 @import url('./sections/contacts/contacts.scss');
