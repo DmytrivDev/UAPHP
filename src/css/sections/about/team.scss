@@ -3,7 +3,7 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 1.5rem 2rem;
     li {
       p {
@@ -25,6 +25,9 @@
     margin-bottom: 2rem;
   }
   .title4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 0.25rem;
   }
 }
@@ -32,33 +35,7 @@
 @media screen and (max-width: 960px) {
   .team {
     &__list {
-      grid-template-columns: repeat(3, 1fr);
-      li {
-        p {
-          font-size: 0.875rem;
-          line-height: 1.42;
-        }
-      }
-    }
-    &__img-wrapp {
-      padding-top: 120%;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .title2 {
-      text-align: start;
-    }
-    .title4 {
-      line-height: 1.4;
-    }
-  }
-}
-
-@media screen and (max-width: 710px) {
-  .team {
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
       li {
         display: none;
         p {
@@ -80,6 +57,7 @@
     &__img-wrapp {
       padding-top: 120%;
       height: auto;
+      margin-bottom: 1rem;
     }
     &__btn-wrapp {
       margin-top: 2rem;
@@ -89,15 +67,12 @@
         display: none;
       }
     }
-    &__more {
-    }
-  }
-}
 
-@media screen and (max-width: 550px) {
-  .team {
-    &__list {
-      grid-template-columns: repeat(1, 1fr);
+    .title2 {
+      text-align: start;
+    }
+    .title4 {
+      line-height: 1.4;
     }
   }
 }

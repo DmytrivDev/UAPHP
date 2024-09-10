@@ -41,7 +41,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -83,6 +84,16 @@ textarea {
   outline: none;
   border: none;
   resize: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0.5rem;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--cf);
+    border-radius: 1.25rem;
+    cursor: pointer;
+  }
 }
 
 select {
