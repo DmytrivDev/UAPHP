@@ -58,6 +58,7 @@
 
 /* News */
 @import url('./sections/news/news.scss');
+@import url('./sections/news/categories.scss');
 
 /* Article */
 @import url('./sections/article/article.scss');
