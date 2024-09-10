@@ -42,6 +42,30 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 8rem;
+    border: 0.125rem solid var(--cw);
+    background-color: var(--cb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease-in;
+    span {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 150ms ease-in;
+    }
+    &:hover {
+      background-color: var(--cw);
+      span {
+        filter: brightness(0) saturate(100%) invert(35%) sepia(33%)
+          saturate(5215%) hue-rotate(201deg) brightness(91%) contrast(89%);
+      }
+    }
   }
   &__filter {
     position: absolute;
@@ -63,5 +87,22 @@
   }
   .title2 {
     color: var(--cw);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stream {
+    min-height: 32rem;
+
+    &__wrapp {
+      padding: 2rem 0;
+    }
+    &__info {
+      gap: 1rem;
+    }
+    &__text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   }
 }
