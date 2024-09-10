@@ -20,3 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 });
+
+const scrollButton = document.querySelector('.activitie__scroll');
+const activitieSection = document.querySelector('.activitie');
+
+function scrollToActivitie() {
+  const sectionHeight = activitieSection.offsetHeight;
+
+  window.scrollBy({
+    top: sectionHeight,
+    behavior: 'smooth',
+  });
+}
+
+scrollButton?.addEventListener('click', scrollToActivitie);

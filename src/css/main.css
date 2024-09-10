@@ -54,6 +54,7 @@
 @import url('./sections/activities/archive.scss');
 
 /* Activitie */
+@import url('./sections/activitie/activitie.scss');
 @import url('./sections/activitie/trainers.scss');
 
 /* Cpd */
