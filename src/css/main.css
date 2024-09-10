@@ -56,6 +56,9 @@
 /* Cpd */
 @import url('./sections/cpd/cpd.scss');
 
+/* News */
+@import url('./sections/news/news.scss');
+
 /* Article */
 @import url('./sections/article/article.scss');
 @import url('./sections/article/similar.scss');
