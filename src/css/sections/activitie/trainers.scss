@@ -117,13 +117,11 @@
     }
     &::-webkit-scrollbar {
       -webkit-appearance: none;
-      width: 0.5rem;
-      cursor: pointer;
+      width: 0.25rem;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: var(--cb);
-      border-radius: 1.25rem;
-      cursor: pointer;
+      background-color: var(--cg);
+      border-radius: 0;
     }
   }
   &__btn-wrapp {
@@ -211,9 +209,6 @@
           font-size: 0.875rem;
           line-height: 1.42;
         }
-      }
-      &::-webkit-scrollbar {
-        width: 0.3rem;
       }
     }
 

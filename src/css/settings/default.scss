@@ -86,13 +86,11 @@ textarea {
   resize: none;
   &::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 0.5rem;
-    cursor: pointer;
+    width: 0.25rem;
   }
   &::-webkit-scrollbar-thumb {
     background-color: var(--cf);
     border-radius: 1.25rem;
-    cursor: pointer;
   }
 }
 

@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// =============================
+
 const scrollButton = document.querySelector('.activitie__scroll');
 const activitieSection = document.querySelector('.activitie');
 
