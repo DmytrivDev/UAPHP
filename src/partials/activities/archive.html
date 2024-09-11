@@ -5,22 +5,28 @@
         <h2 class="title2">Архів подій</h2>
 
         <div class="filtercont">
-          <ul class="filter__list">
-            <li class="filter__item filter__sort">
-              <!-- <button type="button" class="filter__sort-btn choice"> -->
-              <button type="button" class="filter__sort-btn">
-                <span class="filter-new">Спочатку нові</span>
-                <span class="filter-old">Спочатку старі</span>
-              </button>
-            </li>
-            <li class="filter__item filter__type">
-              <select class="archive__select">
+          <div class="filter__item filter__sort">
+            <!-- <button type="button" class="filter__sort-btn choice"> -->
+            <button type="button" class="filter__sort-btn">
+              <span class="filter-new">Спочатку нові</span>
+              <span class="filter-old">Спочатку старі</span>
+            </button>
+            <div class="facetwp-facet facetwp-type-sort" data-type="sort">
+              <select>
+                <option value="">Спочатку нові</option>
+                <option value="_">Спочатку старі</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter__item filter__type archive__select">
+            <div class="facetwp-facet facetwp-type-dropdown">
+              <select class="facetwp-dropdown">
                 <option value="Lecture" selected>Лекція</option>
                 <option value="Seminars">Семінари</option>
                 <option value="Activities">Заходи</option>
               </select>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -33,7 +39,7 @@
 
             <div class="archive__filter"></div>
 
-            <a href="#" class="archive__icon-wrapp ">
+            <a href="#" class="archive__icon-wrapp">
               <span class="no-select">
                 <img src="./img/icons/play_1.svg" alt="" />
               </span>
@@ -95,7 +101,7 @@
 
             <div class="archive__filter"></div>
 
-            <a href="#" class="archive__icon-wrapp ">
+            <a href="#" class="archive__icon-wrapp">
               <span class="no-select">
                 <img src="./img/icons/play_1.svg" alt="" />
               </span>

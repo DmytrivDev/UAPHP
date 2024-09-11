@@ -183,15 +183,17 @@
 }
 
 .filtercont {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
   .filter {
-    &__list {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
     &__item {
     }
     &__sort {
+      .facetwp-facet {
+        display: none;
+      }
     }
     &__sort-btn {
       position: relative;
@@ -841,10 +843,9 @@
   }
 
   .filtercont {
+    gap: 0.56rem;
+
     .filter {
-      &__list {
-        gap: 0.56rem;
-      }
       &__sort-btn {
         position: relative;
         display: flex;

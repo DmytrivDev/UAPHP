@@ -1,8 +1,8 @@
 import NiceSelect from 'nice-select2';
 
-const archiveSelect = document.querySelector('.archive__select');
-const nearSelect = document.querySelector('.near__select');
-const futureSelect = document.querySelector('.future__select');
+const archiveSelect = document.querySelector('.archive__select select');
+const nearSelect = document.querySelector('.near__select select');
+const futureSelect = document.querySelector('.future__select select');
 
 if (archiveSelect) {
   partNiceSelect(archiveSelect);
@@ -21,9 +21,13 @@ function partNiceSelect(part) {
 
   function updateSelectText() {
     const selectedOption = part.options[part.selectedIndex].text;
+
     const customText = `Тип заходу: ${selectedOption}`;
 
-    const display = document.querySelector('.nice-select .current');
+    const filtercont = part.closest('.filtercont');
+
+    const display = filtercont.querySelector('.nice-select .current');
+
     if (display) {
       display.textContent = customText;
     }
