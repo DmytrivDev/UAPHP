@@ -10,32 +10,63 @@
       </div>
 
       <div class="news__wrapp search">
-        <form class="search__form">
-          <span class="search__icon no-select">
-            <img src="./img/icons/search.svg" alt="" />
-          </span>
-          <label class="search__label">
-            <input type="text" name="" placeholder="Пишіть тут" />
-          </label>
-          <button type="submit" class="btn-def"><span>Пошук</span></button>
-        </form>
-        <ul class="search__list">
-          <li>
-            <a href="#" class="active"><span>Всі категорії</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Анонс</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Новина</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Звіти</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Майстер клас</span></a>
-          </li>
-        </ul>
+        <div class="search__form">
+          <div
+            class="facetwp-facet facetwp-facet-search facetwp-type-search"
+            data-name="search"
+            data-type="search"
+          >
+            <span class="facetwp-input-wrap">
+              <input
+                type="text"
+                class="facetwp-search"
+                value=""
+                autocomplete="off"
+                placeholder="Пишіть тут"
+              />
+              <i class="facetwp-icon"></i>
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="facetwp-facet facetwp-facet-catnews facetwp-type-radio"
+          data-name="catnews"
+          data-type="radio"
+        >
+          <div class="facetwp-radio checked" data-value="">Всі проєкти</div>
+          <div
+            class="facetwp-radio"
+            data-value="ed7df4ea6900263dbd71bb29a2ae122b"
+          >
+            <span class="facetwp-display-value">Анонс</span>
+            <span class="facetwp-counter">(36)</span>
+          </div>
+          <div class="facetwp-radio" data-value="zvity">
+            <span class="facetwp-display-value">Новина</span>
+            <span class="facetwp-counter">(20)</span>
+          </div>
+          <div class="facetwp-radio" data-value="obid-bez-bid">
+            <span class="facetwp-display-value">Звіти</span>
+            <span class="facetwp-counter">(20)</span>
+          </div>
+          <div class="facetwp-radio" data-value="trudolyub">
+            <span class="facetwp-display-value">БПР</span>
+            <span class="facetwp-counter">(19)</span>
+          </div>
+          <div class="facetwp-radio" data-value="zhyttyelyub-pikluyetsya">
+            <span class="facetwp-display-value">Подія</span>
+            <span class="facetwp-counter">(13)</span>
+          </div>
+          <div class="facetwp-radio" data-value="zhyttyelyub-pikluyetsya">
+            <span class="facetwp-display-value">Майстер клас</span>
+            <span class="facetwp-counter">(13)</span>
+          </div>
+          <div class="facetwp-radio" data-value="zhyttyelyub-pikluyetsya">
+            <span class="facetwp-display-value">Лекція</span>
+            <span class="facetwp-counter">(13)</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
