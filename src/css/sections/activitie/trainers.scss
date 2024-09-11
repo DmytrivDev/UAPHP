@@ -95,11 +95,13 @@
     width: 100%;
     height: calc(100% - 3rem);
     background-color: var(--cn);
-    overflow: auto;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding-bottom: 7rem;
     transform: translateY(100%);
     transition: all 200ms ease-in;
     div {
+      padding: 1.5rem 1rem 0 1rem;
+      height: 100%;
+      overflow: auto;
       & > * {
         margin-bottom: 0.75rem;
       }
@@ -114,14 +116,14 @@
       p {
         color: var(--cd);
       }
-    }
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 0.25rem;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--cg);
-      border-radius: 0;
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0.25rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--cg);
+        border-radius: 0;
+      }
     }
   }
   &__btn-wrapp {
