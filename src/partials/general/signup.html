@@ -1,5 +1,5 @@
 <!-- <div class="signup is-visible"> -->
-<div class="signup is-visible">
+<div class="signup">
   <div class="signup__body">
     <button type="button" class="signup__close">
       <img src="./img/icons/close.svg" alt="" class="no-select" />
@@ -19,27 +19,85 @@
           <div class="signup__part1">
             <!-- <label class="signup__label is-error"> -->
             <label class="signup__label">
-              <p>Ваше імʼя</p>
-              <input type="text" name="signup-name" placeholder="Пишіть тут" />
-              <span></span>
+              <p class="signup__name">Ваші прізвище, імʼя та по батькові</p>
+              <input
+                type="text"
+                name="signup-name"
+                placeholder="Пишіть тут"
+                class="signup__input"
+              />
+              <span class="require"></span>
             </label>
+
             <label class="signup__label">
-              <p>Ваш email</p>
-              <input type="text" name="signup-email" placeholder="Пишіть тут" />
-              <span></span>
+              <p class="signup__name">Ваш номер телефону</p>
+              <input
+                type="text"
+                name="signup-phone"
+                placeholder="000 000 00 00"
+                class="signup__input"
+              />
+              <span class="require"></span>
+            </label>
+
+            <label class="signup__label">
+              <p class="signup__name">Місце роботи</p>
+              <input
+                type="text"
+                name="signup-work"
+                placeholder="Пишіть тут"
+                class="signup__input"
+              />
+              <span class="require"></span>
             </label>
           </div>
+
           <div class="signup__part2">
             <!-- <label class="signup__label is-error"> -->
+            <div class="signup__label">
+              <p class="signup__name">Identification Type</p>
+              <div class="block-choose">
+                <label class="block-choose__label">
+                  <input
+                    type="radio"
+                    name="particulars-identification"
+                    value="Identity card"
+                  />
+                  <div class="block-choose__box">Identity card</div>
+                </label>
+
+                <label class="block-choose__label">
+                  <input
+                    type="radio"
+                    name="particulars-identification"
+                    value="Passport"
+                  />
+                  <div class="block-choose__box">Passport</div>
+                </label>
+              </div>
+              <span class="require"></span>
+            </div>
+
             <label class="signup__label">
-              <p>Ваше імʼя</p>
-              <input type="text" name="signup-name" placeholder="Пишіть тут" />
-              <span></span>
+              <p class="signup__name">Ваша спеціальність</p>
+              <input
+                type="text"
+                name="signup-specialty"
+                placeholder="Пишіть тут"
+                class="signup__input"
+              />
+              <span class="require"></span>
             </label>
+
             <label class="signup__label">
-              <p>Ваш email</p>
-              <input type="text" name="signup-email" placeholder="Пишіть тут" />
-              <span></span>
+              <p class="signup__name">Серія та номер диплому</p>
+              <input
+                type="text"
+                name="signup-diploma"
+                placeholder="Пишіть тут"
+                class="signup__input"
+              />
+              <span class="require"></span>
             </label>
           </div>
         </div>
