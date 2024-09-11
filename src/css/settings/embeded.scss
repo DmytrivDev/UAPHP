@@ -28,6 +28,7 @@
     font-size: 1.125em;
     font-weight: 500;
     line-height: 1.556em;
+    margin-top: 1.5rem;
   }
 
   h1,
@@ -36,37 +37,52 @@
   h4,
   h5,
   h6 {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   h1 {
-    font-size: 2.4em;
-    line-height: 1.775em;
-    margin-top: 2.4em;
-    margin-bottom: 1.15em;
+    font-size: 2.188em;
+    line-height: 1.2em;
+    margin-top: 1.429em;
+    margin-bottom: 0.743rem;
   }
-
   h2 {
-    font-size: 2.2em;
-    line-height: 1.575em;
-    margin-top: 2.2em;
-    margin-bottom: 0.95em;
-  }
-
-  h3 {
     font-size: 2em;
     line-height: 1.25em;
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.75em;
+  }
+  h3 {
+    font-size: 1.813em;
+    line-height: 1.31em;
+    margin-top: 1.586em;
+    margin-bottom: 0.759em;
+  }
+  h4 {
+    font-size: 1.625em;
+    line-height: 1.385em;
+    margin-top: 1.692em;
+    margin-bottom: 0.769em;
+  }
+  h5 {
+    font-size: 1.5em;
+    line-height: 1.417em;
+    margin-top: 1.75em;
+    margin-bottom: 0.75em;
+  }
+  h6 {
+    font-size: 1.375em;
+    line-height: 1.455em;
+    margin-top: 1.818em;
+    margin-bottom: 0.727em;
   }
 
-  h4,
-  h5,
-  h6 {
-    font-size: 1.8em;
-    line-height: 1.175em;
-    margin-top: 1.8em;
-    margin-bottom: 0.55em;
+  b {
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.556em;
   }
 
   ul {
@@ -159,24 +175,24 @@
       font-size: 1em;
       line-height: 1.5em;
     }
-    h1,
-    h2 {
-      font-size: 1.95em;
-      line-height: 1.343em;
-      margin-top: 1.629em;
-      margin-bottom: 1.057em;
+
+    h1 {
+      font-size: 1.188em;
+      line-height: 1.526em;
     }
-    h3 {
+    h2 {
       font-size: 1.125em;
       line-height: 1.556em;
+    }
+    h3 {
+      font-size: 1.063em;
+      line-height: 1.588em;
     }
     h4,
     h5,
     h6 {
-      font-size: 1.55em;
-      line-height: 0.943em;
-      margin-top: 1.229em;
-      margin-bottom: 0.657em;
+      font-size: 1em;
+      line-height: 1.625em;
     }
   }
 }

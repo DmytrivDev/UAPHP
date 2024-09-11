@@ -40,28 +40,64 @@
     & > *:last-child {
       margin-bottom: 0 !important;
     }
-    h2 {
-      font-size: 2rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-weight: 500;
-      line-height: 1.25;
-      margin-top: 4rem;
-      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.188em;
+      line-height: 1.2em;
+      margin-top: 1.429em;
+      margin-bottom: 0.743rem;
+    }
+    h2 {
+      font-size: 2em;
+      line-height: 1.25em;
+      margin-top: 1.5em;
+      margin-bottom: 0.75em;
     }
     h3 {
-      font-size: 1.75rem;
-      font-weight: 500;
-      line-height: 1.15;
-      margin-top: 3.5rem;
-      margin-bottom: 1.25rem;
+      font-size: 1.813em;
+      line-height: 1.31em;
+      margin-top: 1.586em;
+      margin-bottom: 0.759em;
     }
+    h4 {
+      font-size: 1.625em;
+      line-height: 1.385em;
+      margin-top: 1.692em;
+      margin-bottom: 0.769em;
+    }
+    h5 {
+      font-size: 1.5em;
+      line-height: 1.417em;
+      margin-top: 1.75em;
+      margin-bottom: 0.75em;
+    }
+    h6 {
+      font-size: 1.375em;
+      line-height: 1.455em;
+      margin-top: 1.818em;
+      margin-bottom: 0.727em;
+    }
+
     b {
-      margin-top: 1.5rem;
       display: block;
       font-size: 1.125em;
       font-weight: 500;
       line-height: 1.556em;
+      margin-top: 1.5rem;
     }
+
     p {
+      font-size: 1em;
+      line-height: 1.5em;
       margin-top: 1.5rem;
     }
     a {
@@ -70,12 +106,41 @@
         text-decoration-line: underline;
       }
     }
+
+    ul {
+      margin-left: 1em;
+
+      li {
+        margin-bottom: 1em;
+        margin-left: 0.5em;
+        list-style: disc;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      padding-left: 1em;
+      margin-left: 0;
+
+      li {
+        margin-bottom: 0.5em;
+        list-style: decimal;
+        margin-left: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   &__points {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
     li {
       background-color: var(--cs);
@@ -137,7 +202,7 @@
   }
 
   &__uploaded {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     .file-link {
       background-color: var(--cn);
       padding: 1rem 1.5rem;
@@ -172,7 +237,7 @@
   }
 
   &__soc {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     p {
       margin-top: 0;
       font-size: 0.875rem;
@@ -199,7 +264,7 @@
   }
 
   &__swiper {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
   }
   &__container {
     margin-bottom: 3rem;
@@ -231,24 +296,40 @@
     }
 
     &__content {
-      h3 {
-        font-size: 1.125rem;
-        line-height: 1.55;
-        margin-top: 3rem;
+      h1 {
+        font-size: 1.188em;
+        line-height: 1.526em;
       }
+      h2 {
+        font-size: 1.125em;
+        line-height: 1.556em;
+      }
+      h3 {
+        font-size: 1.063em;
+        line-height: 1.588em;
+      }
+      h4,
+      h5,
+      h6 {
+        font-size: 1em;
+        line-height: 1.625em;
+      }
+
       b {
         font-size: 1em;
         line-height: 1.5em;
       }
+
       p {
-        font-size: 0.875rem;
-        line-height: 1.42;
+        font-size: 0.875em;
+        line-height: 1.429em;
       }
     }
 
     &__points {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       li {
         padding: 1.5rem 1rem;
         div {
@@ -259,7 +340,7 @@
     }
 
     &__uploaded {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       .file-link {
         gap: 0.5rem;
 
@@ -270,25 +351,17 @@
     }
 
     &__soc {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
 
     &__swiper {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
     &__container {
       margin-bottom: 1.5rem;
     }
     &__img-wrapp {
       height: 16rem;
-    }
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .paragraph {
-    &__points {
-      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

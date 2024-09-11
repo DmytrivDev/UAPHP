@@ -31,9 +31,7 @@ function toggleItemInfo(event) {
   const btn = event.currentTarget;
   const trainerItem = btn.closest('.trainers__item');
 
-  if (window.innerWidth <= 960) {
-    trainerItem.classList.toggle('show');
-  }
+  trainerItem.classList.toggle('show');
 }
 
 function removeShowClassOutsideClick(event) {

@@ -10,7 +10,7 @@
     position: relative;
     overflow: hidden;
     transition: all 150ms ease-in;
-    &:hover {
+    &.show {
       box-shadow: 0 0.25rem 12px 0 rgba(11, 11, 11, 0.24);
       .trainers__desc {
         transform: translateY(0);
@@ -69,7 +69,6 @@
     }
   }
   &__btn-info {
-    cursor: default;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -86,6 +85,13 @@
       align-items: center;
       transition: all 150ms ease-in;
     }
+    &:hover {
+      background-color: var(--cs);
+      span {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(86%)
+          saturate(2060%) hue-rotate(201deg) brightness(90%) contrast(92%);
+      }
+    }
   }
   &__desc {
     position: absolute;
@@ -95,7 +101,7 @@
     width: 100%;
     height: calc(100% - 3rem);
     background-color: var(--cn);
-    padding-bottom: 7rem;
+    padding-bottom: 6.5rem;
     transform: translateY(100%);
     transition: all 200ms ease-in;
     div {
@@ -151,40 +157,6 @@
       &:nth-child(2),
       &:nth-child(3) {
         display: block;
-      }
-      &:hover {
-        box-shadow: none;
-        .trainers__desc {
-          transform: translateY(100%);
-        }
-        .trainers__name {
-          visibility: visible;
-          opacity: 1;
-        }
-        .trainers__btn-info {
-          background-color: var(--cb);
-          span {
-            filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
-              saturate(20%) hue-rotate(80deg) brightness(105%) contrast(101%);
-          }
-        }
-      }
-      &.show {
-        box-shadow: 0 0.25rem 12px 0 rgba(11, 11, 11, 0.24);
-        .trainers__desc {
-          transform: translateY(0);
-        }
-        .trainers__name {
-          visibility: hidden;
-          opacity: 0;
-        }
-        .trainers__btn-info {
-          background-color: var(--cs);
-          span {
-            filter: brightness(0) saturate(100%) invert(32%) sepia(86%)
-              saturate(2060%) hue-rotate(201deg) brightness(90%) contrast(92%);
-          }
-        }
       }
     }
     &__img-wrapp {
