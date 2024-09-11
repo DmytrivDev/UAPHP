@@ -107,7 +107,9 @@
       }
     }
 
-    ul {
+    ul:not(.paragraph__points):not(.paragraph__soc ul):not(
+        .paragraph__swiper ul
+      ) {
       margin-left: 1em;
 
       li {
@@ -121,7 +123,9 @@
       }
     }
 
-    ol {
+    ol:not(.paragraph__points):not(.paragraph__soc ol):not(
+        .paragraph__swiper ol
+      ) {
       padding-left: 1em;
       margin-left: 0;
 
