@@ -1,4 +1,4 @@
-.joinform {
+.signup {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,22 +28,15 @@
   &__body {
     position: relative;
     background-color: var(--cw);
-    border-radius: 1rem;
-    max-width: 63.25rem;
+    border-radius: 1.5rem;
+    max-width: 74.5rem;
     width: 100%;
-    min-height: 39.5rem;
     overflow: hidden;
-    display: flex;
-  }
-  &__wrapp {
     padding: 2rem;
   }
-
-  &__img-wrapp {
-    position: relative;
-    width: 25rem;
-    flex-shrink: 0;
+  &__wrapp {
   }
+
   &__close {
     position: absolute;
     top: 2rem;
@@ -59,28 +52,30 @@
     }
   }
 
-  &__part1,
-  &__part2 {
-    transition: all 150ms ease-in;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-  }
+  &__info {
+    max-width: 34.25rem;
+    margin-bottom: 2rem;
 
-  &__part1 {
     .title3 {
       margin-bottom: 0.5rem;
     }
   }
+
   &__form {
-    margin-top: 2rem;
   }
-  &__form-wrapp {
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__part1,
+  &__part2 {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
   }
+
   &__label {
     position: relative;
     display: flex;
@@ -92,10 +87,9 @@
       line-height: 1.42;
       transition: all 150ms ease-in;
     }
-    input,
-    textarea {
+    input {
       color: var(--cm);
-      padding: 1.25rem 1.5rem;
+      padding: 1rem 3.3rem 1rem 1.5rem;
       width: 100%;
       border-radius: 0.5rem;
       border: 0.0625rem solid var(--cf);
@@ -113,12 +107,7 @@
         border-color: var(--cm);
       }
     }
-    input {
-      padding: 1.25rem 3.3rem 1.25rem 1.5rem;
-    }
-    textarea {
-      height: 6.5rem;
-    }
+
     span {
       visibility: hidden;
       opacity: 0;
@@ -149,7 +138,65 @@
       }
     }
   }
+
+  &__checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+    gap: 0.575rem;
+    margin-bottom: 1.5rem;
+    input {
+      display: none;
+      &:checked + span {
+        background-color: var(--cb);
+        &::after {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    span {
+      overflow: hidden;
+      position: relative;
+      border-radius: 0.3rem;
+      flex-shrink: 0;
+      width: 1.1rem;
+      height: 1.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: 0.0625rem solid var(--cb);
+      &::after {
+        content: "";
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 150ms ease-in;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M2.08398 9.99967C2.08398 6.26772 2.08398 4.40175 3.24335 3.24237C4.40273 2.08301 6.2687 2.08301 10.0007 2.08301C13.7326 2.08301 15.5986 2.08301 16.758 3.24237C17.9173 4.40175 17.9173 6.26772 17.9173 9.99967C17.9173 13.7316 17.9173 15.5976 16.758 16.757C15.5986 17.9163 13.7326 17.9163 10.0007 17.9163C6.2687 17.9163 4.40273 17.9163 3.24335 16.757C2.08398 15.5976 2.08398 13.7316 2.08398 9.99967Z' fill='%231771DE' stroke='%231771DE' stroke-width='1.5'/%3E%3Cpath d='M6.66602 11.4583C6.66602 11.4583 7.99935 12.2188 8.66602 13.3333C8.66602 13.3333 10.666 8.95833 13.3327 7.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+    &.is-error {
+      span {
+        border-color: var(--cp);
+      }
+    }
+    p {
+      color: var(--cd);
+      font-size: 0.875rem;
+      line-height: 1.42;
+    }
+  }
+
   &__send {
+    margin-top: 2rem;
     &.disabled {
       cursor: no-drop;
       color: var(--ch);
@@ -160,75 +207,48 @@
       }
     }
   }
-
-  &__part2 {
-  }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4.63rem;
-  }
-  &__done-wrapp {
-    width: 11.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  &__desc {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  &__done {
-    padding: 0.875rem 1.78rem;
-  }
-
-  .is-step {
-    display: block;
-  }
-  .is-transition {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 960px) {
-  .joinform {
+  .signup {
     padding: 2.75rem 1rem;
 
     &__body {
-      min-height: auto;
-      max-width: 35rem;
-    }
-    &__wrapp {
+      border-radius: 1rem;
+      max-width: 45rem;
       padding: 1.5rem 1rem;
     }
 
-    &__img-wrapp {
-      display: none;
-    }
     &__close {
       top: 1.5rem;
       right: 1rem;
       width: 1.5rem;
       height: 1.5rem;
     }
-    &__send {
-      width: 100%;
-    }
 
-    &__part1 {
+    &__info {
+      max-width: 100%;
+
       .title3 {
+        font-size: 1.5rem;
+        line-height: 1.33;
         margin-bottom: 0.75rem;
       }
     }
+
+    &__box {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    &__part1,
+    &__part2 {
+      gap: 1.5rem;
+    }
+
     &__label {
       input {
         padding: 1rem 2.8rem 1rem 1.5rem;
-      }
-      textarea {
-        height: 6.5rem;
       }
       span {
         bottom: 1rem;
@@ -238,21 +258,8 @@
       }
     }
 
-    &__content {
-      margin-top: 4rem;
-    }
-    &__desc {
-      font-size: 0.875rem;
-      line-height: 1.42;
-      margin-bottom: 2rem;
-    }
-    &__done {
+    &__send {
       width: 100%;
-    }
-
-    .title3 {
-      font-size: 1.5rem;
-      line-height: 1.33;
     }
   }
 }

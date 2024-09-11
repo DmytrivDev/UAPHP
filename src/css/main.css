@@ -10,17 +10,18 @@
 @import url('./sections/general/headerStyle.scss');
 
 @import url('./sections/general/cookie.scss');
+@import url('./sections/general/ourcontact.scss');
 @import url('./sections/general/join.scss');
 @import url('./sections/general/joinform.scss');
-@import url('./sections/general/ourcontact.scss');
+@import url('./sections/general/signup.scss');
 @import url('./sections/general/base.scss');
 @import url('./sections/general/paragraph.scss');
 @import url('./sections/general/mailing.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');
-@import url('./sections/header/patrs/nav.scss');
-@import url('./sections/header/patrs/mob.scss');
+@import url('./sections/header/parts/nav.scss');
+@import url('./sections/header/parts/mob.scss');
 
 /* Home */
 @import url('./sections/home/hero.scss');

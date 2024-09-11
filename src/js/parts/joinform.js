@@ -6,8 +6,8 @@ const sendBtn = document.querySelector('.joinform__send');
 const sendDone = document.querySelector('.joinform__done');
 
 const form = document.querySelector('.joinform__form');
-const patr1 = document.querySelector('.joinform__patr1');
-const patr2 = document.querySelector('.joinform__patr2');
+const part1 = document.querySelector('.joinform__part1');
+const part2 = document.querySelector('.joinform__part2');
 
 const body = document.body;
 
@@ -20,19 +20,19 @@ function validateForm() {
   const nameLabel = nameField.closest('.joinform__label');
   const emailLabel = emailField.closest('.joinform__label');
 
-  nameLabel.classList.remove('error');
-  emailLabel.classList.remove('error');
+  nameLabel.classList.remove('is-error');
+  emailLabel.classList.remove('is-error');
   sendBtn.classList.remove('disabled');
 
   if (nameField.value.trim() === '') {
-    nameLabel.classList.add('error');
+    nameLabel.classList.add('is-error');
     sendBtn.classList.add('disabled');
     isValid = false;
   }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(emailField.value.trim())) {
-    emailLabel.classList.add('error');
+    emailLabel.classList.add('is-error');
     sendBtn.classList.add('disabled');
     isValid = false;
   }
@@ -59,14 +59,14 @@ function submitForm() {
 function openModal() {
   const formLabel = document.querySelectorAll('.joinform__label');
   formLabel.forEach(label => {
-    label.classList.remove('error');
+    label.classList.remove('is-error');
   });
 
   sendBtn.classList.remove('disabled');
   sendBtn.disabled = false;
 
-  patr1.classList.add('is-transition', 'is-step');
-  patr2.classList.remove('is-transition', 'is-step');
+  part1.classList.add('is-transition', 'is-step');
+  part2.classList.remove('is-transition', 'is-step');
 
   joinForm.classList.add('is-visible');
   body.classList.add('overhide');
@@ -80,8 +80,8 @@ function closeModal() {
 
 // Перехід до "Успішно!" сторінки
 function showSuccess() {
-  patr1.classList.remove('is-transition', 'is-step');
-  patr2.classList.add('is-transition', 'is-step');
+  part1.classList.remove('is-transition', 'is-step');
+  part2.classList.add('is-transition', 'is-step');
 }
 
 // Обробка натискання кнопки "Подати заявку"
