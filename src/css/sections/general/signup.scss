@@ -300,11 +300,12 @@
       line-height: 1.33 !important;
       border: none !important;
       border-bottom: 0.0625rem solid var(--cf) !important;
-      box-shadow: inset 0px 0px 4px 1px rgba(209, 209, 209, 1);
     }
     .list {
       border-radius: 0 !important;
       max-height: 9.5rem !important;
+      box-shadow: inset 0px 0px 4px 1px rgba(209, 209, 209, 1);
+
     }
     .list:hover .option:not(:hover) {
       color: var(--cm) !important;
