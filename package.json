@@ -21,6 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "imask": "^7.6.1",
     "nice-select2": "^2.2.0",
     "npm": "^10.7.0",
     "sass": "^1.72.0",
