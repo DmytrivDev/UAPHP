@@ -55,7 +55,6 @@ if (signup) {
 
   signupContainer.addEventListener('click', function (event) {
     if (event.target === signupContainer) {
-      console.log('object');
       closeModal();
     }
   });
