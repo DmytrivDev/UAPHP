@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
   telInputs.forEach(input => {
     IMask(input, {
       mask: '+{38} (000) 000 00 00',
-      lazy: false,
     });
   });
 });
