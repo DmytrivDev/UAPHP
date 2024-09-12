@@ -1,4 +1,5 @@
 import NiceSelect from 'nice-select2';
+import IMask from 'imask';
 
 const signup = document.querySelector('.signup');
 const signupForm = document.querySelector('.signup__form');
@@ -84,3 +85,14 @@ if (signup) {
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const telInputs = document.querySelectorAll('input[type="tel"]');
+
+  telInputs.forEach(input => {
+    IMask(input, {
+      mask: '+{38} (000) 000 00 00',
+      lazy: false,
+    });
+  });
+});
