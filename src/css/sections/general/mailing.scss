@@ -136,9 +136,10 @@
         transform: translateX(-50%) translateY(-50%);
         width: 100%;
         height: 100%;
+        transition: all 150ms ease-in;
         background-repeat: no-repeat;
         background-position: center;
-        transition: all 150ms ease-in;
+        background-size: 1.1rem 1.1rem;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M2.08398 9.99992C2.08398 6.26797 2.08398 4.40199 3.24335 3.24262C4.40273 2.08325 6.2687 2.08325 10.0007 2.08325C13.7326 2.08325 15.5986 2.08325 16.758 3.24262C17.9173 4.40199 17.9173 6.26797 17.9173 9.99992C17.9173 13.7318 17.9173 15.5978 16.758 16.7573C15.5986 17.9166 13.7326 17.9166 10.0007 17.9166C6.2687 17.9166 4.40273 17.9166 3.24335 16.7573C2.08398 15.5978 2.08398 13.7318 2.08398 9.99992Z' fill='white' stroke='white' stroke-width='1.5'/%3E%3Cpath d='M6.66602 11.4583C6.66602 11.4583 7.99935 12.2188 8.66602 13.3333C8.66602 13.3333 10.666 8.95833 13.3327 7.5' stroke='%231771DE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       }
     }
