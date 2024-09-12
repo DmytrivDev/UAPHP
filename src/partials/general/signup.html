@@ -1,122 +1,129 @@
 <!-- <div class="signup is-visible"> -->
 <div class="signup">
-  <div class="signup__body">
-    <button type="button" class="signup__close">
-      <img src="./img/icons/close.svg" alt="" class="no-select" />
-    </button>
+  <div class="signup__container">
+    <div class="signup__body">
+      <button type="button" class="signup__close">
+        <img src="./img/icons/close.svg" alt="" class="no-select" />
+      </button>
 
-    <div class="signup__wrapp">
-      <div class="signup__info">
-        <h3 class="title3">Форма реєстрації</h3>
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-
-      <form class="signup__form">
-        <div class="signup__box">
-          <div class="signup__part1">
-            <!-- <label class="signup__label is-error"> -->
-            <label class="signup__label">
-              <p class="signup__name">Ваші прізвище, імʼя та по батькові</p>
-              <input
-                type="text"
-                name="signup-name"
-                placeholder="Пишіть тут"
-                class="signup__input"
-              />
-              <span class="require"></span>
-            </label>
-
-            <label class="signup__label">
-              <p class="signup__name">Ваш номер телефону</p>
-              <input
-                type="text"
-                name="signup-phone"
-                placeholder="000 000 00 00"
-                class="signup__input"
-              />
-              <span class="require"></span>
-            </label>
-
-            <label class="signup__label">
-              <p class="signup__name">Місце роботи</p>
-              <input
-                type="text"
-                name="signup-work"
-                placeholder="Пишіть тут"
-                class="signup__input"
-              />
-              <span class="require"></span>
-            </label>
-          </div>
-
-          <div class="signup__part2">
-            <!-- <label class="signup__label is-error"> -->
-            <div class="signup__label">
-              <p class="signup__name">Identification Type</p>
-              <div class="block-choose">
-                <label class="block-choose__label">
-                  <input
-                    type="radio"
-                    name="particulars-identification"
-                    value="Identity card"
-                  />
-                  <div class="block-choose__box">Identity card</div>
-                </label>
-
-                <label class="block-choose__label">
-                  <input
-                    type="radio"
-                    name="particulars-identification"
-                    value="Passport"
-                  />
-                  <div class="block-choose__box">Passport</div>
-                </label>
-              </div>
-              <span class="require"></span>
-            </div>
-
-            <label class="signup__label">
-              <p class="signup__name">Ваша спеціальність</p>
-              <input
-                type="text"
-                name="signup-specialty"
-                placeholder="Пишіть тут"
-                class="signup__input"
-              />
-              <span class="require"></span>
-            </label>
-
-            <label class="signup__label">
-              <p class="signup__name">Серія та номер диплому</p>
-              <input
-                type="text"
-                name="signup-diploma"
-                placeholder="Пишіть тут"
-                class="signup__input"
-              />
-              <span class="require"></span>
-            </label>
-          </div>
+      <div class="signup__wrapp">
+        <div class="signup__info">
+          <h3 class="title3">Форма реєстрації</h3>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
         </div>
 
-        <!-- <label class="mailing__checkbox is-error"> -->
-        <label class="signup__checkbox">
-          <input type="checkbox" name="signup-check" />
-          <span></span>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur
-          </p>
-        </label>
+        <form class="signup__form">
+          <div class="signup__box">
+            <!-- <label class="signup__label is-error"> -->
+            <div class="signup__part">
+              <label class="signup__label">
+                <p class="signup__name">Ваші прізвище, імʼя та по батькові</p>
+                <textarea
+                  name="signup-name"
+                  placeholder="Пишіть тут"
+                  class="signup__input"
+                  rows="1"
+                ></textarea>
+                <span class="require"></span>
+              </label>
 
-        <!-- <button type="submit" class="signup__btn btn-def disabled"> -->
-        <button type="submit" class="signup__send btn-def">
-          <span>Подати заявку</span>
-        </button>
-      </form>
+              <div class="signup__label">
+                <p class="signup__name">Ваша стать</p>
+                <div class="block-choose">
+                  <label class="block-choose__label">
+                    <input
+                      type="radio"
+                      name="signup-gender"
+                      value="Male gender"
+                    />
+                    <div class="block-choose__box">Чоловік</div>
+                  </label>
+
+                  <label class="block-choose__label">
+                    <input
+                      type="radio"
+                      name="signup-gender"
+                      value="Female gender"
+                    />
+                    <div class="block-choose__box">Жінка</div>
+                  </label>
+                </div>
+                <span class="require"></span>
+              </div>
+            </div>
+
+            <div class="signup__part">
+              <label class="signup__label">
+                <p class="signup__name">Ваш номер телефону</p>
+                <input
+                  type="text"
+                  name="signup-phone"
+                  placeholder="000 000 00 00"
+                  class="signup__input"
+                />
+                <span class="require"></span>
+              </label>
+
+              <label class="signup__label">
+                <p class="signup__name">Ваша спеціальність</p>
+                <select class="signup__select">
+                  <option value="Specialty" selected>Cпеціальність</option>
+                  <option value="Specialty">Cпеціальн</option>
+                  <option value="Specialty">Cпеці</option>
+                  <option value="Specialty">Cпеці</option>
+                  <option value="Specialty">Cпеці</option>
+                  <option value="Specialty">Cпеці</option>
+                  <option value="Specialty">Cпеці</option>
+                </select>
+                <span class="require"></span>
+              </label>
+            </div>
+
+            <div class="signup__part">
+              <label class="signup__label">
+                <p class="signup__name">Місце роботи</p>
+                <textarea
+                  type="text"
+                  name="signup-work"
+                  placeholder="Пишіть тут"
+                  class="signup__input"
+                  rows="1"
+                ></textarea>
+                <span class="require"></span>
+              </label>
+
+              <label class="signup__label">
+                <p class="signup__name">Серія та номер диплому</p>
+                <input
+                  type="text"
+                  name="signup-diploma"
+                  placeholder="Пишіть тут"
+                  class="signup__input"
+                />
+                <span class="require"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- <label class="mailing__checkbox is-error"> -->
+          <label class="signup__checkbox">
+            <input type="checkbox" name="signup-check" />
+            <span></span>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur
+            </p>
+          </label>
+
+          <!-- <button type="submit" class="signup__btn btn-def disabled"> -->
+          <button type="submit" class="signup__send btn-def">
+            <span>Подати заявку</span>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
