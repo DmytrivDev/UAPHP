@@ -253,10 +253,10 @@
     gap: 0.5rem !important;
     justify-content: space-between !important;
     background-color: var(--cw) !important;
-    padding: 1rem 1.5rem !important;
     border-radius: 0.5rem !important;
     border: 0.0625rem solid var(--cf) !important;
     height: auto !important;
+    padding: 1rem 1.5rem !important;
     font-size: 1.125rem !important;
     line-height: 1.33 !important;
     &:after {
@@ -295,13 +295,13 @@
       color: var(--cm);
       margin: 0 !important;
       border-radius: 0 !important;
-      font-size: 0.875rem !important;
-      line-height: 1.42 !important;
-      padding: 0.75rem 1.5rem !important;
+      padding: 1rem 1.5rem !important;
+      font-size: 1.125rem !important;
+      line-height: 1.33 !important;
       border: none !important;
       border-bottom: 0.0625rem solid var(--cf) !important;
+      box-shadow: inset 0px 0px 4px 1px rgba(209, 209, 209, 1);
     }
-
     .list {
       border-radius: 0 !important;
       max-height: 9.5rem !important;
@@ -433,6 +433,10 @@
 
       .nice-select-dropdown {
         margin-top: 0.25rem !important;
+      }
+      .nice-select-search {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
       }
     }
     .current {

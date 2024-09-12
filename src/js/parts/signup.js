@@ -14,6 +14,25 @@ if (signupSelect) {
   new NiceSelect(signupSelect, {
     searchable: true,
   });
+
+  updateSelectText(signupSelect);
+}
+
+function updateSelectText(part) {
+  const signupLabel = part.closest('.signup__label');
+
+  const select = signupLabel.querySelector('.nice-select .current');
+  const searchInput = signupLabel.querySelector('.nice-select-search');
+
+  searchInput.setAttribute('placeholder', 'Пишіть тут');
+  select.textContent = 'Пошук';
+
+  searchInput.addEventListener('input', function () {
+    select.textContent = searchInput.value;
+    if (select.textContent === '') {
+      select.textContent = 'Пошук';
+    }
+  });
 }
 
 const textareas = document.querySelectorAll('textarea.signup__input');
