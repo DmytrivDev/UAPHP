@@ -10,6 +10,7 @@ const part1 = document.querySelector('.joinform__part1');
 const part2 = document.querySelector('.joinform__part2');
 
 const body = document.body;
+const header = document.querySelector('.header');
 
 // Валідація форми
 function validateForm() {
@@ -57,6 +58,11 @@ function submitForm() {
 
 // Функція для відкриття модального вікна
 function openModal() {
+  const scrollBarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.paddingRight = `${scrollBarWidth}px`;
+  header.style.paddingRight = `${scrollBarWidth}px`;
+
   const formLabel = document.querySelectorAll('.joinform__label');
   formLabel.forEach(label => {
     label.classList.remove('is-error');
@@ -74,6 +80,9 @@ function openModal() {
 
 // Закриття модального вікна
 function closeModal() {
+  document.body.style.paddingRight = '';
+  header.style.paddingRight = '';
+
   joinForm.classList.remove('is-visible');
   body.classList.remove('overhide');
 }

@@ -2,12 +2,12 @@ import NiceSelect from 'nice-select2';
 import IMask from 'imask';
 
 const signup = document.querySelector('.signup');
-const signupForm = document.querySelector('.signup__form');
 const signupContainer = document.querySelector('.signup__container');
 const signupClose = document.querySelector('.signup__close');
 
 const activitieAccept = document.querySelector('.activitie__accept');
 const body = document.body;
+const header = document.querySelector('.header');
 
 const signupSelect = document.querySelector('.signup__select');
 
@@ -41,11 +41,19 @@ if (textareas) {
 
 if (signup) {
   function openModal() {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+    header.style.paddingRight = `${scrollBarWidth}px`;
+
     signup.classList.add('is-visible');
     body.classList.add('overhide');
   }
 
   function closeModal() {
+    document.body.style.paddingRight = '';
+    header.style.paddingRight = '';
+
     signup.classList.remove('is-visible');
     body.classList.remove('overhide');
   }
