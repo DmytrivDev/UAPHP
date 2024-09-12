@@ -1,5 +1,4 @@
 import NiceSelect from 'nice-select2';
-import IMask from 'imask';
 
 const signup = document.querySelector('.signup');
 const signupForm = document.querySelector('.signup__form');
@@ -14,25 +13,6 @@ const signupSelect = document.querySelector('.signup__select');
 if (signupSelect) {
   new NiceSelect(signupSelect, {
     searchable: true,
-  });
-
-  updateSelectText(signupSelect);
-}
-
-function updateSelectText(part) {
-  const signupLabel = part.closest('.signup__label');
-
-  const select = signupLabel.querySelector('.nice-select .current');
-  const searchInput = signupLabel.querySelector('.nice-select-search');
-
-  searchInput.setAttribute('placeholder', 'Пишіть тут');
-  select.textContent = 'Пошук';
-
-  searchInput.addEventListener('input', function () {
-    select.textContent = searchInput.value;
-    if (select.textContent === '') {
-      select.textContent = 'Пошук';
-    }
   });
 }
 
@@ -85,14 +65,3 @@ if (signup) {
     }
   });
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  const telInputs = document.querySelectorAll('input[type="tel"]');
-
-  telInputs.forEach(input => {
-    IMask(input, {
-      mask: '+{38} (000) 000 00 00',
-      lazy: false,
-    });
-  });
-});
