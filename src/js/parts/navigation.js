@@ -53,28 +53,39 @@ export function initMenu() {
 
 // ==============================
 
-const subMenu = document.querySelector('.sub-menu');
+const subMenuLinks = document.querySelectorAll('.sub-menu a');
+const subMenu = document.querySelectorAll('.sub-menu');
 
-const navLangs = document.querySelectorAll('.nav__lang');
 const navLangLinks = document.querySelectorAll('.nav__lang > li > a');
-console.log(navLangLinks);
 
 function toggleLinkLang(e) {
   e.preventDefault();
-  console.log('object');
   e.currentTarget.classList.toggle('is-opened');
+}
+
+function closeLinkLang() {
+  navLangLinks.forEach(link => {
+    link.classList.remove('is-opened');
+  });
 }
 
 navLangLinks.forEach(link => {
   link.addEventListener('click', toggleLinkLang);
 });
 
-// navLangs.forEach(lang => {
-//   lang.addEventListener('click', e => {
-//     if (e.target !== navLangs) {
-//       navLangLinks.forEach(link => {
-//         link.classList.remove('is-opened');
-//       });
-//     }
-//   });
-// });
+subMenuLinks.forEach(link => {
+  link.addEventListener('click', closeLinkLang);
+});
+
+document.addEventListener('click', function (e) {
+  const isClickInsideNavLang = [...navLangLinks].some(link =>
+    link.contains(e.target)
+  );
+  const isClickInsideSubMenu = [...subMenu].some(menu =>
+    menu.contains(e.target)
+  );
+
+  if (!isClickInsideNavLang && !isClickInsideSubMenu) {
+    closeLinkLang();
+  }
+});
