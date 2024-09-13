@@ -52,7 +52,7 @@
   0% {
     transform: translateX(calc(100% + var(--move1-p)));
   }
-  100% {
+  100% { 
     transform: translateX(calc(-100% + var(--move1-m) - 1.5rem));
   }
 }
