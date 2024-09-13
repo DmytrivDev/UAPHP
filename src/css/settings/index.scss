@@ -1,16 +1,3 @@
-@media screen and (max-width: 960px) {
-}
-
-@media screen and (max-width: 500px) {
-}
-
-// <button type="button" class="btn-def">Стати учасником</button>
-// <a href="#" class="btn-more bgr">
-//   <span class="btn-text">Читати далі</span>
-//   <span class="btn-icon"></span>
-//   <span class="btn-circle"></span>
-// </a>
-
 .sec-pt {
   padding-top: 10rem;
 }
@@ -319,6 +306,7 @@
     padding: 0.5rem 0.75rem 0.5rem 0.25rem;
     border-radius: 2rem;
     border: 0.0625rem solid var(--cm);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,14 +330,14 @@
       transition: all 150ms ease-in;
     }
     &:hover {
-      background-color: var(--cm);
+      background-color: var(--cw);
+      border-color: var(--cb);
       span {
-        color: var(--cw);
+        color: var(--cb);
       }
       &::after,
       &::before {
-        filter: brightness(0) saturate(100%) invert(93%) sepia(100%)
-          saturate(0%) hue-rotate(47deg) brightness(103%) contrast(105%);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_359_18589)'%3E%3Cpath d='M6.00003 12C6.00003 12 10 9.05407 10 8C10 6.94587 6 4 6 4' stroke='%231771DE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_359_18589'%3E%3Crect width='16' height='16' fill='white' transform='matrix(1 -8.74228e-08 -8.74228e-08 -1 0 16)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
       }
     }
     &.is-disabled {
@@ -775,6 +763,7 @@
   padding: 0.5rem 0.75rem 0.5rem 0.25rem;
   border-radius: 2rem;
   border: 0.0625rem solid var(--cm);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -798,14 +787,14 @@
     transition: all 150ms ease-in;
   }
   &:hover {
-    background-color: var(--cm);
+    background-color: var(--cw);
+    border-color: var(--cb);
     span {
-      color: var(--cw);
+      color: var(--cb);
     }
     &::after,
     &::before {
-      filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(0%)
-        hue-rotate(47deg) brightness(103%) contrast(105%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_359_18589)'%3E%3Cpath d='M6.00003 12C6.00003 12 10 9.05407 10 8C10 6.94587 6 4 6 4' stroke='%231771DE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_359_18589'%3E%3Crect width='16' height='16' fill='white' transform='matrix(1 -8.74228e-08 -8.74228e-08 -1 0 16)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
     }
   }
   &.is-disabled {
@@ -1062,7 +1051,4 @@
       transform: translateY(0);
     }
   }
-}
-
-@media screen and (max-width: 500px) {
 }
