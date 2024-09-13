@@ -919,6 +919,19 @@
     }
   }
 
+  .announce,
+  .card__item,
+  .base__item,
+  .events__list li {
+    &:hover {
+      .btn-more {
+        .btn-icon {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
   .filtercont {
     gap: 0.56rem;
 
