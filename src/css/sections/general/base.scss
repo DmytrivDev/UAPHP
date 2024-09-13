@@ -9,6 +9,11 @@
   &__item {
     background-color: var(--cn);
     padding: 1.5rem 1.56rem;
+    transition: all 150ms ease-in;
+
+    &:hover {
+      box-shadow: 0 0.25rem 0.5rem 0 rgba(11, 11, 11, 0.16);
+    }
     &:nth-child(2) {
       .base__lead {
         span {

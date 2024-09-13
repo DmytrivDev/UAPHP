@@ -51,14 +51,64 @@
       a {
         font-size: 0.875rem;
         line-height: 1.42;
+        &::before {
+          top: 0.35rem;
+        }
       }
     }
     a {
+      position: relative;
+      display: block;
       color: var(--cw);
       width: fit-content;
       transition: all 150ms ease-in;
+      &::after {
+        content: "";
+        overflow: hidden;
+        opacity: 0;
+        height: 0.0625rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0.15rem;
+        left: 0;
+        background-color: var(--cw);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        pointer-events: none;
+        transition: all 150ms ease-in;
+      }
+      &::before {
+        content: "";
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0.6rem;
+        left: -0.75rem;
+        width: 0.25rem;
+        height: 0.25rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background-color: var(--cw);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        pointer-events: none;
+        transition: all 150ms ease-in;
+      }
       &:hover {
-        opacity: 0.7;
+        &::after {
+          overflow: visible;
+          opacity: 1;
+        }
+        &::before {
+          overflow: visible;
+          opacity: 1;
+        }
       }
     }
     & > li > a {

@@ -259,9 +259,10 @@
         align-items: center;
         width: 2rem;
         height: 2rem;
-        transition: all 150ms ease-in;
+        transition: all 50ms ease-in;
         &:hover {
-          opacity: 0.5;
+          filter: brightness(0) saturate(100%) invert(53%) sepia(64%)
+            saturate(6986%) hue-rotate(201deg) brightness(90%) contrast(92%);
         }
       }
     }
