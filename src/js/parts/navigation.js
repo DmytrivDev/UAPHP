@@ -50,3 +50,31 @@ export function initMenu() {
     });
   }
 }
+
+// ==============================
+
+const subMenu = document.querySelector('.sub-menu');
+
+const navLangs = document.querySelectorAll('.nav__lang');
+const navLangLinks = document.querySelectorAll('.nav__lang > li > a');
+console.log(navLangLinks);
+
+function toggleLinkLang(e) {
+  e.preventDefault();
+  console.log('object');
+  e.currentTarget.classList.toggle('is-opened');
+}
+
+navLangLinks.forEach(link => {
+  link.addEventListener('click', toggleLinkLang);
+});
+
+// navLangs.forEach(lang => {
+//   lang.addEventListener('click', e => {
+//     if (e.target !== navLangs) {
+//       navLangLinks.forEach(link => {
+//         link.classList.remove('is-opened');
+//       });
+//     }
+//   });
+// });
