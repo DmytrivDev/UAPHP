@@ -1,4 +1,4 @@
-const joinBtn = document.querySelector('.join__btn');
+const openPopup = document.querySelectorAll('.open-popup');
 
 const joinForm = document.querySelector('.joinform');
 const closeBtn = document.querySelector('.joinform__close');
@@ -57,25 +57,37 @@ function submitForm() {
 }
 
 // Функція для відкриття модального вікна
-function openModal() {
+function openModal(evt) {
   const scrollBarWidth =
     window.innerWidth - document.documentElement.clientWidth;
   document.body.style.paddingRight = `${scrollBarWidth}px`;
   header.style.paddingRight = `${scrollBarWidth}px`;
+  const id = evt.currentTarget.dataset.id;
+  const popup = document.getElementById(id);
 
-  const formLabel = document.querySelectorAll('.joinform__label');
-  formLabel.forEach(label => {
-    label.classList.remove('is-error');
-  });
+  if (popup) {
+    const btn = popup.querySelector('.joinform__send');
+    const part1Pop = document.querySelector('.joinform__part1');
+    const part2Pop = document.querySelector('.joinform__part2');
 
-  sendBtn.classList.remove('disabled');
-  sendBtn.disabled = false;
+    const formLabel = popup.querySelectorAll('.joinform__label');
+    formLabel?.forEach(label => {
+      label.classList.remove('is-error');
+    });
 
-  part1.classList.add('is-transition', 'is-step');
-  part2.classList.remove('is-transition', 'is-step');
+    if (btn) {
+      btn.classList.remove('disabled');
+      btn.disabled = false;
+    }
 
-  joinForm.classList.add('is-visible');
-  body.classList.add('overhide');
+    if (part1Pop && part2Pop) {
+      part1Pop.classList.add('is-transition', 'is-step');
+      part2Pop.classList.remove('is-transition', 'is-step');
+    }
+
+    popup.classList.add('is-visible');
+    body.classList.add('overhide');
+  }
 }
 
 // Закриття модального вікна
@@ -112,7 +124,9 @@ nameField?.addEventListener('input', validateForm);
 emailField?.addEventListener('input', validateForm);
 
 // Відкриття модального вікна при натисканні на кнопку "Стати учасником"
-joinBtn?.addEventListener('click', openModal);
+openPopup?.forEach(e => {
+  e.addEventListener('click', openModal);
+});
 
 // Закриття модального вікна при натисканні на кнопку "X"
 closeBtn?.addEventListener('click', closeModal);

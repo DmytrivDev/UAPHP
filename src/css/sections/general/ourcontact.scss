@@ -20,7 +20,7 @@
       line-height: normal;
       margin-bottom: 0.5rem;
     }
-    a {
+    a, span {
       display: block;
       color: var(--cm);
       font-size: 1.5rem;
@@ -219,7 +219,7 @@
       p {
         margin-bottom: 0.25rem;
       }
-      a {
+      a, span {
         font-size: 1.25rem;
         line-height: 1.4;
       }
