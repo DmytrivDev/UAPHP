@@ -78,9 +78,9 @@
       }
     }
     &:hover {
-      background-color: transparent;
+      background-color: var(--cw);
       color: var(--cr);
-      border-color: var(--ch);
+      border-color: var(--cr);
 
       span {
         &::before {

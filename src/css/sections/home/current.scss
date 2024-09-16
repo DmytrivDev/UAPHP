@@ -286,13 +286,8 @@
     }
   }
 
-  .announce,
-  .current__announce .current {
-    &__news,
-    &.announce {
-      min-height: auto;
-      padding: 1rem;
-    }
+  .announce {
+    padding: 1.5rem 1rem;
 
     &__info {
       gap: 1.5rem;
