@@ -24,17 +24,8 @@
       line-height: 1.42;
     }
 
-    .areas__icon-wrapp {
-      filter: brightness(0) saturate(100%) invert(30%) sepia(81%)
-        saturate(2043%) hue-rotate(202deg) brightness(92%) contrast(89%);
-    }
-
     &:nth-child(2) {
       background-color: var(--ci);
-      .areas__icon-wrapp {
-        filter: brightness(0) saturate(100%) invert(9%) sepia(57%)
-          saturate(3892%) hue-rotate(227deg) brightness(112%) contrast(100%);
-      }
       .areas__block-grid {
         div {
           background-color: var(--cu);
@@ -56,10 +47,6 @@
     }
     &:nth-child(3) {
       background-color: var(--cj);
-      .areas__icon-wrapp {
-        filter: brightness(0) saturate(100%) invert(13%) sepia(90%)
-          saturate(5516%) hue-rotate(350deg) brightness(88%) contrast(91%);
-      }
       .areas__block-grid {
         div {
           background-color: var(--cw);
@@ -81,10 +68,6 @@
     }
     &:nth-child(4) {
       background-color: var(--ck);
-      .areas__icon-wrapp {
-        filter: brightness(0) saturate(100%) invert(51%) sepia(88%)
-          saturate(1736%) hue-rotate(153deg) brightness(94%) contrast(101%);
-      }
       .areas__block-grid {
         div {
           background-color: var(--cy);

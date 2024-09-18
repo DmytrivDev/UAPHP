@@ -1,5 +1,6 @@
 .values {
 	margin-top: 4.6875rem;
+	overflow: hidden;
 
 	&__body {
 		position: relative;
@@ -8,11 +9,11 @@
 	}
 	&__img-wrapp {
 		position: absolute;
-		top: -1px;
+		top: 1px;
 		left: -10.6875rem;
 		z-index: 1;
 		width: 64.875rem;
-		height: 100%;
+		bottom: 0;
 	}
 
 	&__container {
@@ -45,6 +46,7 @@
 			width: 2.5rem;
 			height: 2.5rem;
 			border-radius: 50%;
+			position: relative;
 			overflow: hidden;
 			border: 0.0625rem solid var(--cw);
 			margin-left: -1rem;

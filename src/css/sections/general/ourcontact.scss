@@ -1,5 +1,5 @@
 .ourcontact {
-  padding: 10rem 0;
+  padding-top: 10rem;
 
   &__body {
   }
@@ -213,7 +213,7 @@
 
 @media screen and (max-width: 960px) {
   .ourcontact {
-    padding: 6rem 0;
+    padding-top: 6rem;
 
     &__address {
       p {

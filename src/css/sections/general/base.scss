@@ -14,20 +14,6 @@
     &:hover {
       box-shadow: 0 0.25rem 0.5rem 0 rgba(11, 11, 11, 0.16);
     }
-    &:nth-child(2) {
-      .base__lead {
-        span {
-          color: var(--cv);
-        }
-      }
-    }
-    &:nth-child(3) {
-      .base__lead {
-        span {
-          color: var(--cr);
-        }
-      }
-    }
     p {
       max-width: 63.6875rem;
     }
@@ -45,6 +31,14 @@
     span {
       color: var(--cb);
       font-size: 0.875rem;
+
+      &.bgv {
+        color: var(--cv);
+      }
+
+      &.bgr {
+        color: var(--cr);
+      }
     }
   }
 

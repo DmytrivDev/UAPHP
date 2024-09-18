@@ -1,38 +1,90 @@
 import NiceSelect from 'nice-select2';
 
-const archiveSelect = document.querySelector('.archive__select select');
+const archiveSelect = document.querySelector('.archive__select');
 const nearSelect = document.querySelector('.near__select select');
-const futureSelect = document.querySelector('.future__select select');
+const futureSelect = document.querySelector('.future__select');
+let selector;
 
 if (archiveSelect) {
-  partNiceSelect(archiveSelect);
+  partNiceSelect(
+    archiveSelect.querySelector('select'),
+    archiveSelect.dataset.txt
+  );
 }
 if (nearSelect) {
   partNiceSelect(nearSelect);
 }
 if (futureSelect) {
-  partNiceSelect(futureSelect);
+  document.addEventListener('facetwp-loaded', function () {
+    partNiceSelect(
+      futureSelect.querySelector('select'),
+      futureSelect.dataset.txt
+    );
+  });
 }
 
-function partNiceSelect(part) {
-  new NiceSelect(part, {
-    searchable: false,
+function partNiceSelect(part, txt) {
+  if (!document.querySelector('.nice-select.facetwp-dropdown')) {
+    new NiceSelect(part, {
+      searchable: false,
+    });
+
+    function updateSelectText() {
+      const selectedOption = part.options[part.selectedIndex].text;
+
+      const customText = `${txt}: ${selectedOption}`;
+
+      const filtercont = part.closest('.filtercont');
+
+      const display = filtercont.querySelector('.nice-select .current');
+
+      if (display) {
+        display.textContent = customText;
+      }
+    }
+    updateSelectText();
+
+    part.addEventListener('change', updateSelectText);
+  }
+}
+
+const sortCtrl = document.querySelector('.futureSort');
+
+if (sortCtrl) {
+  document.addEventListener('facetwp-loaded', function () {
+    selector = document.querySelector('.filter__sort select');
+
+    const valSt = selector.value;
+
+    changeSel(valSt);
+
+
+    if (valSt !== '') {
+      sortCtrl.classList.add('choice');
+    } else {
+      sortCtrl.classList.remove('choice');
+    }
   });
 
-  function updateSelectText() {
-    const selectedOption = part.options[part.selectedIndex].text;
+  sortCtrl.addEventListener('click', e => {
+    e.preventDefault;
 
-    const customText = `Тип заходу: ${selectedOption}`;
+    const val = selector.value;
 
-    const filtercont = part.closest('.filtercont');
-
-    const display = filtercont.querySelector('.nice-select .current');
-
-    if (display) {
-      display.textContent = customText;
+    if (val === '') {
+      selector.value = 'old';
+    } else {
+      selector.value = '';
     }
-  }
-  updateSelectText();
 
-  part.addEventListener('change', updateSelectText);
+    FWP.refresh();
+  });
+}
+
+function changeSel(val) {
+  if (val === '') {
+    sortCtrl.classList.remove('choice');
+  } else {
+    sortCtrl.classList.add('choice');
+  }
 }

@@ -100,3 +100,30 @@ function articleSidebar(page) {
     });
   });
 }
+
+const shereLink = document.querySelector('.a2a_button_copy_link');
+let timeoutId;
+
+if (shereLink) {
+  shereLink.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const tempInput = document.createElement('input');
+    const copyText = window.location.href;
+    document.body.appendChild(tempInput);
+    tempInput.value = copyText;
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+
+    shereLink.classList.add('copied');
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    timeoutId = setTimeout(function () {
+      shereLink.classList.remove('copied');
+    }, 1000);
+  });
+}

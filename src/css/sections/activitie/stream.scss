@@ -35,6 +35,9 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    img {
+      z-index: 3;
+    }
   }
   &__play {
     position: absolute;
@@ -62,8 +65,8 @@
     &:hover {
       background-color: var(--cw);
       span {
-        filter: brightness(0) saturate(100%) invert(35%) sepia(33%)
-          saturate(5215%) hue-rotate(201deg) brightness(91%) contrast(89%);
+        filter: brightness(0) saturate(100%) invert(35%) sepia(33%) saturate(5215%) hue-rotate(201deg) brightness(91%)
+          contrast(89%);
       }
     }
   }
@@ -75,11 +78,7 @@
     width: 100%;
     height: 100%;
     opacity: 0.88;
-    background: linear-gradient(
-      180deg,
-      rgba(15, 15, 15, 0.4) 0%,
-      rgba(15, 15, 15, 0.88) 100%
-    );
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.4) 0%, rgba(15, 15, 15, 0.88) 100%);
   }
 
   .container {
@@ -90,9 +89,24 @@
   }
 }
 
+.stream {
+  &.started {
+    .stream__img-wrapp {
+      img {
+        display: none;
+      }
+    }
+
+    .stream__filter, .stream__wrapp {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .stream {
-    min-height: 32rem;
+    min-height: 29.875rem;
+    height: calc(100vw / 16 * 9);
 
     &__wrapp {
       padding: 2rem 0;

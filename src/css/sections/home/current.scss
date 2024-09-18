@@ -8,6 +8,23 @@
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+
+    .announce__title {
+      color: #fff !important;
+    }
+
+    .btn-more {
+      .btn-circle {
+        background-color: var(--cw);
+      }
+      .btn-text {
+        color: var(--cb);
+      }
+      .btn-icon {
+        filter: brightness(0) saturate(100%) invert(55%) sepia(68%) saturate(6180%) hue-rotate(199deg) brightness(88%)
+          contrast(99%);
+      }
+    }
   }
 
   &__img-wrapp {
@@ -153,13 +170,13 @@
       p {
         color: var(--cw);
         &::before {
-          filter: brightness(0) saturate(100%) invert(98%) sepia(2%)
-            saturate(193%) hue-rotate(162deg) brightness(113%) contrast(100%);
+          filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(193%) hue-rotate(162deg) brightness(113%)
+            contrast(100%);
         }
         &:last-child {
           &::before {
-            filter: brightness(0) saturate(100%) invert(98%) sepia(2%)
-              saturate(193%) hue-rotate(162deg) brightness(113%) contrast(100%);
+            filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(193%) hue-rotate(162deg)
+              brightness(113%) contrast(100%);
           }
         }
       }

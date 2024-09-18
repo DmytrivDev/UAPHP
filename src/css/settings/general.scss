@@ -28,6 +28,10 @@ input, textarea {
   margin: 0 auto;
 }
 
+.main {
+  padding-bottom: 10rem;
+}
+
 @media screen and (max-width: 1376px) {
   html,
   body {
@@ -45,6 +49,9 @@ input, textarea {
   }
   .container {
     padding: 0 1em;
+  }
+  .main {
+    padding-bottom: 6rem;
   }
 }
 

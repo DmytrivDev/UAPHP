@@ -1,8 +1,3 @@
-.projectPage {
-  .mailing {
-    padding-bottom: 10rem;
-  }
-}
 .mailing {
   &__wrapp {
   }
@@ -173,11 +168,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .projectPage {
-    .mailing {
-      padding-bottom: 6rem;
-    }
-  }
   .mailing {
     &__wrapp {
       overflow: hidden;

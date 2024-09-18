@@ -2,20 +2,12 @@
   &__body {
     padding-top: 6rem;
   }
-
-  .events__list {
-    margin-bottom: 3rem;
-  }
 }
 
 @media screen and (max-width: 960px) {
   .categories {
     &__body {
       padding-top: 2rem;
-    }
-
-    .events__list {
-      margin-bottom: 2.62rem;
     }
   }
 }
