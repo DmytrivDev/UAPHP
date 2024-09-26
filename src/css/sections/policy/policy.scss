@@ -1,4 +1,4 @@
-.policyPage {
+.policyPage, .page-template-default {
 	.wrapper {
 		overflow: visible;
 	}
@@ -9,6 +9,7 @@
 
 	&__body {
 		padding: 6rem 0 3rem 0;
+		padding-bottom: 0;
 	}
 	&__wrapp {
 		display: grid;
@@ -50,6 +51,7 @@
 
 		&__body {
 			padding: 3rem 0 1.5rem 0;
+			padding-bottom: 0;
 		}
 		&__wrapp {
 			grid-template-columns: 1fr;
