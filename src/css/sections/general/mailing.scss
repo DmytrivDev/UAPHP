@@ -140,7 +140,10 @@
     }
     &.is-error {
       span {
-        border-color: var(--cr);
+        border-color: var(--cp);
+      }
+      p {
+        color: var(--cr);
       }
     }
     p {

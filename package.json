@@ -26,6 +26,7 @@
     "nice-select2": "^2.2.0",
     "npm": "^10.7.0",
     "sass": "^1.72.0",
+    "validator": "^13.12.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }

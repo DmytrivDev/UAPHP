@@ -5,6 +5,7 @@
   z-index: 50;
   transition: all 150ms ease-in;
   transform: translateY(100%);
+
   &.is-visible {
     transform: translateY(0);
   }
@@ -13,6 +14,7 @@
     padding: 1.5rem 1rem;
     max-width: 30.625rem;
     background-color: var(--cw);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   &__text {
     font-size: 0.875rem;

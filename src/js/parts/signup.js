@@ -58,11 +58,11 @@ if (signup) {
     body.classList.remove('overhide');
   }
 
-  activitieAccept.addEventListener('click', openModal);
+  activitieAccept?.addEventListener('click', openModal);
 
-  signupClose.addEventListener('click', closeModal);
+  signupClose?.addEventListener('click', closeModal);
 
-  signupContainer.addEventListener('click', function (event) {
+  signupContainer?.addEventListener('click', function (event) {
     if (event.target === signupContainer) {
       closeModal();
     }
@@ -75,12 +75,14 @@ if (signup) {
   });
 }
 
+export const maskOptions = {
+  mask: '+{38}(000)000-00-00'  // маска для українського номера телефону
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   const telInputs = document.querySelectorAll('input[type="tel"]');
 
   telInputs.forEach(input => {
-    IMask(input, {
-      mask: '+{38} (000) 000 00 00',
-    });
+    const phoneMask = IMask(input, maskOptions);
   });
 });

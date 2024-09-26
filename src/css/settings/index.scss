@@ -768,7 +768,7 @@
     }
   }
 
-  .facetwp-facet-catnews {
+  .facetwp-facet-catnews, .facetwp-facet-materials {
     width: 52.75rem;
     display: flex;
     justify-content: center;
@@ -1131,7 +1131,7 @@
       padding: 0.875rem 1.25rem;
     }
 
-    .facetwp-facet-catnews {
+    .facetwp-facet-catnews, .facetwp-facet-materials {
       width: 100%;
       justify-content: stretch;
       gap: 0.5rem;
