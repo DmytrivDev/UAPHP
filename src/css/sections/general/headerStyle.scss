@@ -34,8 +34,10 @@
     .nav__list {
       a {
         color: var(--cm);
-        &::after {
-          background-color: var(--cm);
+        &:hover {
+          &::before {
+            background-color: var(--cm);
+          }
         }
       }
     }

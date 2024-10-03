@@ -17,19 +17,19 @@
     overflow: hidden;
     position: relative;
     padding: 2rem;
-    &:nth-child(1) {
+    &:nth-child(3n + 1) {
       background-color: var(--cs);
       .function__number {
         color: var(--cb);
       }
     }
-    &:nth-child(2) {
+    &:nth-child(3n + 2) {
       background-color: var(--cj);
       .function__number {
         color: var(--cr);
       }
     }
-    &:nth-child(3) {
+    &:nth-child(3n) {
       background-color: var(--ck);
       .function__number {
         color: var(--cv);
@@ -51,6 +51,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      width: 100%;
+    }
   }
   &__link-wrapp {
     position: absolute;
