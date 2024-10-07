@@ -5,7 +5,6 @@ const signup = document.querySelector('.signup');
 const signupContainer = document.querySelector('.signup__container');
 const signupClose = document.querySelector('.signup__close');
 
-const activitieAccept = document.querySelector('.activitie__accept');
 const body = document.body;
 const header = document.querySelector('.header');
 
@@ -57,8 +56,6 @@ if (signup) {
     signup.classList.remove('is-visible');
     body.classList.remove('overhide');
   }
-
-  activitieAccept?.addEventListener('click', openModal);
 
   signupClose?.addEventListener('click', closeModal);
 
